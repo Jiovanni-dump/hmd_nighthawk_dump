@@ -1,0 +1,11 @@
+
+ro.com.google.clientidbase=android-hmd
+ro.com.google.clientidbase.ms=android-hmd-terr1-rso2
+ro.com.google.clientidbase.vs=android-hmd-terr1-rso2
+ro.com.google.clientidbase.tx=android-hmd-terr1-rso2
+ro.com.google.clientidbase.pg=android-hmd-deo2
+### [TCT-5796] add new India Ringtones
+ro.config.ringtone=HumanMelody.ogg,HumanMelody.ogg
+ro.config.alarm_alert=Vavo.ogg
+ro.config.notification_sound=Notification8.ogg
+

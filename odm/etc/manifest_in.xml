@@ -1,0 +1,7 @@
+<manifest version="1.0" type="device">
+    <!-- NFC is declared to be disabled -->
+    <hal override="true">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+    </hal>
+</manifest>

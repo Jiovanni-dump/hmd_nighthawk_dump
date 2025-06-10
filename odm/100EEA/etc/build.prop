@@ -1,0 +1,30 @@
+# begin make dir cust odm build properties
+ro.product.odm.device=NHK
+ro.product.vendor.device=NHK
+ro.product.vendor_dlkm.device=NHK
+ro.product.odm.name=Nighthawk_00EEA
+ro.product.vendor.name=Nighthawk_00EEA
+ro.product.vendor_dlkm.name=Nighthawk_00EEA
+ro.odm.build.fingerprint=HMD/Nighthawk_00WW/NHK:15/AQ3A.240912.001/00WW_2_430:user/release-keys
+ro.vendor.build.fingerprint=HMD/Nighthawk_00WW/NHK:15/AQ3A.240912.001/00WW_2_430:user/release-keys
+ro.vendor_dlkm.build.fingerprint=HMD/Nighthawk_00WW/NHK:15/AQ3A.240912.001/00WW_2_430:user/release-keys
+ro.product.odm.model=HMD Fusion
+ro.product.vendor.model=HMD Fusion
+ro.product.vendor_dlkm.model=HMD Fusion
+ro.product.odm.brand=HMD
+ro.product.vendor.brand=HMD
+ro.product.vendor_dlkm.brand=HMD
+ro.product.odm.manufacturer=HMD Global
+ro.product.vendor.manufacturer=HMD Global
+ro.product.vendor_dlkm.manufacturer=HMD Global
+ro.vendor.build.shipment=true
+ro.vendor.product.nickname=HMD Fusion
+# end cust build properties
+
+####################################
+# from vendor custom_pack dir
+####################################
+### create for oneimage 100EEA
+
+
+
