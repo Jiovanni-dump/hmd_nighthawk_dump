@@ -1,0 +1,26 @@
+
+on post-fs-data
+    mkdir /data/system/ 0777 system system
+    mkdir /data/system/spec-space/ 0777 system system
+    mkdir /data/system/spec-space/system-app 0777 system system
+    mkdir /data/system/spec-space/system-priv-app 0777 system system
+    mkdir /data/system/spec-space/system_ext-app 0777 system system
+    mkdir /data/system/spec-space/system_ext-priv-app 0777 system system
+    mkdir /data/system/spec-space/system_ext-overlay 0777 system system
+    mkdir /data/system/spec-space/product-app 0777 system system
+    mkdir /data/system/spec-space/product-priv-app 0777 system system
+    mkdir /data/system/spec-space/product-overlay 0777 system system
+    mkdir /data/system/spec-space/etc  0777 system system
+    mkdir /data/system/spec-space/etc/product 0777 system system
+    mkdir /data/system/spec-space/etc/system 0777 system system
+    mkdir /data/system/spec-space/etc/system_ext 0777 system system
+    mkdir /data/system/spec-space/etc/product/permissions 0777 system system
+    mkdir /data/system/spec-space/etc/product/sysconfig 0777 system system
+    mkdir /data/system/spec-space/etc/product/default-permissions 0777 system system
+    mkdir /data/system/spec-space/etc/system/permissions 0777 system system
+    mkdir /data/system/spec-space/etc/system/sysconfig 0777 system system
+    mkdir /data/system/spec-space/etc/system/default-permissions 0777 system system
+    mkdir /data/system/spec-space/etc/system_ext/permissions 0777 system system
+    mkdir /data/system/spec-space/etc/system_ext/sysconfig 0777 system system
+    mkdir /data/system/spec-space/etc/system_ext/default-permissions 0777 system system
+

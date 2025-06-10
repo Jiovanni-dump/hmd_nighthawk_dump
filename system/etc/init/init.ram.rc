@@ -1,0 +1,28 @@
+#add by hao.huang@hmdglobal.com for lmk
+on property:ro.boot.config.ramsize=3GB
+    setprop ro.vendor.ramconfig 11
+on property:ro.boot.config.ramsize=4GB
+    setprop ro.vendor.ramconfig 12
+on property:ro.boot.config.ramsize=6GB
+    setprop ro.vendor.ramconfig 13
+on property:ro.boot.config.ramsize=8GB
+    setprop ro.vendor.ramconfig 13
+on property:ro.boot.config.ramsize=12GB
+    setprop ro.vendor.ramconfig 13
+
+on property:ro.vendor.ramconfig=11
+    setprop ro.lmk.custom_adj "0,100,200,250,900,950"
+    setprop ro.lmk.custom_minfree "73728,92160,110592,129024,147456,184320"
+    setprop ro.lmk.customize_minfree true
+
+on property:ro.vendor.ramconfig=12
+    setprop ro.lmk.custom_adj "0,100,200,250,900,950"
+    setprop ro.lmk.custom_minfree "27648,34560,41472,48384,82944,120960"
+    setprop ro.lmk.customize_minfree true
+    
+on property:ro.vendor.ramconfig=13
+    setprop ro.lmk.custom_adj "0,100,200,250,900,950"
+    setprop ro.lmk.custom_minfree "27648,34560,41472,48384,82944,120960"
+    setprop ro.lmk.customize_minfree true
+
+		

@@ -1,0 +1,3 @@
+on post-fs-data
+    mkdir /data/misc/rro/ 0777 system system
+    restorecon /data/misc/rro/bootanimation.zip

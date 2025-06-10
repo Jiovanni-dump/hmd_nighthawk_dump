@@ -1,0 +1,19 @@
+#add by jacky.wei@hmdglobal.com for catch modem log on user version
+
+service hmdflashmonitor /system/bin/hmdflashmonitor
+    class core
+    user root
+    group root system oem_2901 sdcard_rw sdcard_r media_rw  shell ext_data_rw
+    seclabel u:r:hmdflashmonitor:s0
+
+on property:ro.boot.config.ramsize=4GB
+    setprop ro.sys.vram.configurable 2,4
+
+on property:ro.boot.config.ramsize=6GB
+    setprop ro.sys.vram.configurable 4,6
+
+on property:ro.boot.config.ramsize=8GB
+    setprop ro.sys.vram.configurable 4,8
+
+on property:ro.boot.config.ramsize=12GB
+    setprop ro.sys.vram.configurable 4,12
