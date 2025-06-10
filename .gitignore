@@ -1,0 +1,15 @@
+odm/spec-space/app/BCGames/BCGames.apk
+product/priv-app/GmsCore/GmsCore.apk
+product/priv-app/Velvet/Velvet.apk
+product/priv-app/Messages/Messages.apk
+product/priv-app/HMDCamera/HMDCamera.apk
+product/app/WebViewGoogle/WebViewGoogle.apk
+product/app/Gmail2/Gmail2.apk
+product/app/YouTube/YouTube.apk
+product/app/Maps/Maps.apk
+vendor/etc/camera/vidhance.lic
+bootRE/boot.elf
+recovery.img
+system/app/Photos/Photos.apk
+system_ext/apex/com.android.vndk.v30.apex
+modem.img

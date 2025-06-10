@@ -1,0 +1,14 @@
+# qssi-user 15 AQ3A.240912.001 eng.androi.00000000.000000 release-keys
+- manufacturer: qualcomm
+- platform: parrot
+- codename: nighthawk
+- flavor: qssi-user
+- release: 15
+- id: AQ3A.240912.001
+- incremental: eng.androi.00000000.000000
+- tags: release-keys
+- fingerprint: HMD/nighthawk/nighthawk:12/SKQ1.240903.001/jenkins03120416:user/release-keys
+- is_ab: true
+- brand: HMD
+- branch: qssi-user-15-AQ3A.240912.001-eng.androi.00000000.000000-release-keys
+- repo: hmd_nighthawk_dump

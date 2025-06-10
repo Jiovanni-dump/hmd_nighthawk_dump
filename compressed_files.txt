@@ -1,0 +1,13 @@
+odm/spec-space/app/BCGames/BCGames.apk.xz
+product/priv-app/GmsCore/GmsCore.apk.xz
+product/priv-app/Velvet/Velvet.apk.xz
+product/priv-app/Messages/Messages.apk.xz
+product/app/WebViewGoogle/WebViewGoogle.apk.xz
+product/app/Gmail2/Gmail2.apk.xz
+product/app/YouTube/YouTube.apk.xz
+product/app/Maps/Maps.apk.xz
+vendor/etc/camera/vidhance.lic.xz
+bootRE/boot.elf.xz
+recovery.img.xz
+system/app/Photos/Photos.apk.xz
+modem.img.xz
