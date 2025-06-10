@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <allow-in-power-save package="com.hmdglobal.app.omacp" />
+  <allow-in-data-usage-save package="com.hmdglobal.app.omacp"/>
+</config>
+

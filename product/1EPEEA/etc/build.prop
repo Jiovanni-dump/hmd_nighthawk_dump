@@ -1,0 +1,53 @@
+# begin HMD cust pruduct build properties
+ro.build.product=NHK
+ro.product.model.num=EPEEA
+ro.build.display.id=00WW_2_430
+ro.product.system.device=NHK
+ro.product.product.device=NHK
+ro.product.system_ext.device=NHK
+ro.product.bootimage.device=NHK
+ro.product.product.name=Nighthawk_EPEEA
+ro.product.system.name=Nighthawk_EPEEA
+ro.product.system_ext.name=Nighthawk_EPEEA
+ro.product.bootimage.name=Nighthawk_EPEEA
+ro.build.product.name=Nighthawk_EPEEA
+ro.system.build.fingerprint=HMD/Nighthawk_00WW/NHK:15/AQ3A.240912.001/00WW_2_430:user/release-keys
+ro.product.build.fingerprint=HMD/Nighthawk_00WW/NHK:15/AQ3A.240912.001/00WW_2_430:user/release-keys
+ro.system_ext.build.fingerprint=HMD/Nighthawk_00WW/NHK:15/AQ3A.240912.001/00WW_2_430:user/release-keys
+ro.bootimage.build.fingerprint=HMD/Nighthawk_00WW/NHK:15/AQ3A.240912.001/00WW_2_430:user/release-keys
+ro.build.version.base_os=
+ro.product.product.model=HMD Fusion Business Edition
+ro.product.system.model=HMD Fusion Business Edition
+ro.product.system_ext.model=HMD Fusion Business Edition
+ro.product.bootimage.model=HMD Fusion Business Edition
+ro.product.nickname=HMD Fusion Business Edition
+ro.product.board=Nighthawk
+ro.build.version.incremental=00WW_2_430
+ro.product.build.version.incremental=00WW_2_430
+ro.system.build.version.incremental=00WW_2_430
+ro.system_ext.build.version.incremental=00WW_2_430
+ro.bootimage.build.version.incremental=00WW_2_430
+ro.build.software.version=V2.430
+ro.build.software.subversion=B01
+ro.product.system.brand=HMD
+ro.product.product.brand=HMD
+ro.product.system_ext.brand=HMD
+ro.product.bootimage.brand=HMD
+ro.product.system.manufacturer=HMD Global
+ro.product.product.manufacturer=HMD Global
+ro.product.system_ext.manufacturer=HMD Global
+ro.product.bootimage.manufacturer=HMD Global
+ro.system.build.shipment=true
+# end cust build properties
+
+####################################
+# from cust prop
+####################################
+### create for oneimage 1EPEEA
+ro.com.google.clientidbase=android-hmd
+ro.com.google.clientidbase.ms=android-hmd-terr2-rso2
+ro.com.google.clientidbase.vs=android-hmd-terr2-rso2
+ro.com.google.clientidbase.tx=android-hmd-terr2-rso2
+ro.com.google.clientidbase.pg=android-hmd-deo2
+
+

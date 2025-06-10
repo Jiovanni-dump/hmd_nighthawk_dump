@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<permissions>
+    <!-- HMD features -->
+    <feature name="com.hmdglobal.android.feature.HMD_EXPERIENCE"/>
+    <feature name="com.hmdglobal.android.feature.OZO_EXPERIENCE"/>
+    <feature name="com.hmdglobal.android.feature.HMD_OEM"/>
+</permissions>

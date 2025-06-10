@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config-list>
+    <option group="default">
+        <overlay status="disable" apptype="product-overlay" apppath="FrameworksResPer" packageName="android.performance.common"/>
+        <!--[TF-VZW]-->
+        <apk status="disable" apptype="system-priv-app" apppath="CarrierLoginEngine" packageName="com.verizon.mips.services"></apk>
+        <apk status="disable" apptype="system-priv-app" apppath="VZWAPNLib" packageName="com.vzw.apnlib"></apk>
+        <!--[TF]-->
+        <apk status="disable" apptype="system-app" apppath="1Weather" packageName="com.handmark.expressweather"></apk>
+        <apk status="disable" apptype="system-app" apppath="Dashboard" packageName="com.swishme.tracfone"></apk>
+        <apk status="disable" apptype="system-priv-app" apppath="DevicePulse" packageName="com.tracfone.preload.accountservices"></apk>
+        <apk status="disable" apptype="product-priv-app" apppath="GamesHub" packageName="com.dti.folderlauncher"></apk>
+        <apk status="disable" apptype="system-priv-app" apppath="Ignite" packageName="com.dti.tracfone"></apk>
+        <apk status="disable" apptype="system-app" apppath="MySites" packageName="com.tracfone.generic.mysites"></apk>
+        <apk status="disable" apptype="product-priv-app" apppath="TheDaily" packageName="com.huub.tiger"></apk>
+        <apk status="disable" apptype="product-priv-app" apppath="Headlines" packageName="us.sliide.tiger"></apk>
+             <apk status="disable" apptype="product-priv-app" apppath="Omacp" packageName="com.hmdglobal.app.omacp">
+             		<etc etclocation="product" etctype="permissions" etcpath="privapp-permissions-omacp.xml"/>
+             		<etc  etclocation="product" etctype="sysconfig" etcpath="omacp-whitelist.xml" packageName="com.hmdglobal.app.omacp"></etc>
+             	</apk>
+             	  <apk status="disable" apptype="system_ext-priv-app" apppath="HMDOma" packageName="com.hmdglobal.app.omacp">
+             	  			<etc etclocation="system_ext" etctype="permissions" etcpath="privapp-permissions-oma.xml"/>
+             	  			<etc  etclocation="system_ext" etctype="sysconfig" etcpath="oma-whitelist.xml" packageName="com.hmdglobal.app.omacp"></etc>
+             	  	</apk>
+        <!-- TCT start -->
+        <apk-list>
+            <apk status="disable" removable="true" apptype="system-app" apppath="facebook" packageName="com.facebook.katana"></apk>
+            <apk status="disable" apptype="product-priv-app" apppath="SarSensorManager" packageName="com.hmdglobal.app.sarsensormanager"></apk>
+            <apk status="disable" apptype="product-priv-app" apppath="instantKey" packageName="com.hmdglobal.app.instantkey"></apk>
+            <apk status="disable" apptype="system_ext-app" apppath="MoodsCoreService" packageName="com.hmdglobal.app.moodsservice"></apk>
+            <apk status="disable" apptype="product-app" apppath="DigitalDetox" packageName="com.hmdglobal.app.digitaldetox"></apk>
+            <apk status="disable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+            <apk status="disable" apptype="system-app" apppath="MyEuiccOverlayApp" packageName="com.hmdglobal.android.hmdeuiccoverlayapp.partnercustomizer"></apk>
+            <apk status="disable" apptype="system-app" apppath="NfcSec" packageName="com.android.nfc"></apk>
+            <apk status="enable" apptype="system_ext-priv-app" apppath="Memorycleaner" packageName="com.hmdglobal.memorycleaner"></apk>
+            <apk status="enable" apptype="product-priv-app" apppath="HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND" packageName="com.android.hotwordenrollment.okgoogle"></apk>
+            <apk status="enable" apptype="product-priv-app" apppath="HotwordEnrollmentXGoogleHEXAGON_WIDEBAND" packageName="com.android.hotwordenrollment.xgoogle"></apk>
+        </apk-list>
+        <!-- TCT end -->
+        <!-- NHK start -->
+        <overlay-list>
+            <overlay status="disable" apptype="product-overlay" apppath="RRODeskClock" packageName="com.android.deskclock.overlay"/>
+            <overlay status="disable" apptype="product-overlay" apppath="RROHmdWeather" packageName="com.hmdglobal.weather.overlay"/>
+            <overlay status="disable" apptype="product-overlay" apppath="RROSystemUI" packageName="com.android.systemui.overlay"/>
+        </overlay-list>
+        <apk-list>
+            <apk status="disable" apptype="product-app" apppath="HMDFMRadio" packageName="com.hmdglobal.app.fmradio"></apk>
+        </apk-list>
+        <!-- NHK end -->
+        <!-- TTA start -->
+        <apk-list>
+            <!--[TF-VZW]-->
+            <apk status="disable" apptype="system-priv-app" apppath="WFCSettings" packageName="com.npg.vzw.settings"></apk>
+            <!--[TF]-->
+            <apk status="disable" apptype="product-app" apppath="HMDRSUDaemon" packageName="com.hmdglobal.app.rsudaemon"></apk>
+            <apk status="disable" apptype="system-priv-app" apppath="TFLock" packageName="com.tracfone.tflock"></apk>
+            <apk status="disable" apptype="system-priv-app" apppath="TFLockStatus" packageName="com.tracfone.tflockstatus"></apk>
+            <apk status="disable" apptype="system-priv-app" apppath="TFPortLock" packageName="com.tracfone.portlock"></apk>
+            <apk status="disable" apptype="system-priv-app" apppath="TFStatus" packageName="com.tracfone.tfstatus"></apk>
+        </apk-list>
+        <!-- TTA end -->
+        <!-- RPT start -->
+        <!-- RPT end -->
+    </option>
+</config-list>
+

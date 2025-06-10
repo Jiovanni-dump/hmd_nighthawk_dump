@@ -1,0 +1,2 @@
+hmdremotelock    u:object_r:hmd_service:s0
+HMDEnterpriseService    u:object_r:hmd_service:s0

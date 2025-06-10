@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Camera features -->
+    <feature name="com.google.lens.feature.CAMERA_INTEGRATION"/>
+    <feature name="com.google.lens.feature.IMAGE_INTEGRATION" />
+    <!-- googlequicksearch features -->
+    <feature name="com.google.android.googlequicksearchbox.SMARTSPACE_DEVICE_FEATURE"/>
+    <feature name="com.google.android.googlequicksearchbox.OEM_AOD_SMARTSPACE"/>
+    <feature name="com.google.android.googlequicksearchbox.OEM_SMARTSPACE_WIDGET"/>
+</config>

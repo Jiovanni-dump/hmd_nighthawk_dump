@@ -1,0 +1,17 @@
+/system/bin/hmdflashmonitor u:object_r:hmdflashmonitor_exec:s0
+/sys/devices/platform/soc/4804000.ufshc/health_descriptor/eol_info u:object_r:sysfs_eol_info_dev:s0
+/sys/devices/platform/soc/1d84000.ufshc/health_descriptor/eol_info u:object_r:sysfs_eol_info_dev:s0
+/data/misc/bootanimation.zip        u:object_r:rro_bootanimation_file:s0
+/data/misc/rro/bootanimation.zip        u:object_r:rro_bootanimation_file:s0
+/data/misc/rro(/.*)?        u:object_r:rro_bootanimation_file:s0
+/system_ext/bin/getlog          u:object_r:hmdlog_exec:s0
+/data/local/hmdlogs(/.*)?                u:object_r:hmd_log_file:s0
+/system_ext/bin/getlogext          u:object_r:hmdlog_exec:s0
+/proc/bootmsg                u:object_r:proc_bootmsg_log:s0
+/(product|system/product)/bin/init\.qti\.display\.sh             u:object_r:vendor_sys_qti_display_exec:s0
+/(product|system|system_ext)/bin/qvirtmgr                        u:object_r:vendor_qvirtmgr_exec:s0
+/(product|system|system_ext)/bin/qcrosvm                         u:object_r:vendor_qcrosvm_exec:s0
+/(product|system/product)/vm-system(/.*)?                        u:object_r:vendor_vm_qti_system_file:s0
+/(product|system|system_ext)/bin/vendor\.qti\.qvirt-service      u:object_r:vendor_hal_qvirtservice_qti_exec:s0
+/(product|system|system_ext)/bin/vendor\.qti\.qvirt-service_rs   u:object_r:vendor_hal_qvirtservice_qti_exec:s0
+/system/bin/faccmd               u:object_r:dumpstate_exec:s0
