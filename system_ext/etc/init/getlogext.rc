@@ -1,0 +1,144 @@
+
+on post-fs-data
+    # add aplog dir
+    mkdir /data/local 0751 system system
+    mkdir /data/local/hmdlogs 0775 system system
+    mkdir /data/local/hmdlogs/aplog 0777 system system
+    mkdir /data/local/hmdlogs/aplog/last 0777 system system
+    mkdir /data/local/hmdlogs/aplog/last2 0777 system system
+    # for modem log
+    # mkdir /data/local/hmdlogs/mdlog 0775 system system
+    #for adsp log
+    mkdir /data/local/hmdlogs/adsplog 0775 system system
+    # for ap wakeup source log
+    mkdir /data/local/hmdlogs/aplog/bugreports 0775 system system
+    # add by jacky.wei@hmdglobal.com for ScarletWitch GetlogTool tcpdump 2020-12-02-03
+    mkdir /data/local/hmdlogs/tcpdump 0777 system system
+    mkdir /data/local/hmdlogs/tcpdump/last 0777 system system
+    mkdir /data/local/hmdlogs/tcpdump/last2 0777 system system
+    # add by jacky.wei@hmdglobal.com
+    mkdir /data/local/hmdlogs/aplog/tombstones 0777 system system
+    mkdir /data/local/hmdlogs/aplog/anr 0777 system system
+    symlink /sdcard/hmdlogs/mdlog /data/local/hmdlogs/mdlog
+
+service getlogext /system_ext/bin/getlogext -a
+    disabled
+    user shell
+    group root system oem_2901 sdcard_rw sdcard_r media_rw  shell ext_data_rw
+    oneshot
+    seclabel u:r:hmdlog:s0
+
+on property:sys.debug.getlogext=1
+    start getlogext
+
+on property:sys.debug.getlogext=0
+    stop getlogext
+
+service getlogbugreport /system_ext/bin/getlogext -b
+    disabled
+    user shell
+    group root system oem_2901 sdcard_rw sdcard_r media_rw  shell ext_data_rw log
+    oneshot
+    seclabel u:r:hmdlog:s0
+
+on property:sys.debug.getlogbugreport=1
+    start getlogbugreport
+
+on property:sys.debug.getlogbugreport=0
+    stop getlogbugreport
+
+service getaplog /system_ext/bin/getlogext -c
+    disabled
+    user root
+    group root system oem_2901 sdcard_rw sdcard_r media_rw  shell ext_data_rw
+    oneshot
+    seclabel u:r:hmdlog:s0
+
+service getkernellog /system_ext/bin/getlogext -k
+    disabled
+    user root
+    group root system oem_2901 sdcard_rw sdcard_r media_rw  shell ext_data_rw
+    oneshot
+    seclabel u:r:hmdlog:s0
+
+on property:sys.debug.getkernellog=1
+    start getkernellog
+
+on property:sys.debug.getkernellog=0
+    stop getkernellog
+
+on property:persist.sys.debug.getaplog=1
+    start getaplog
+
+on property:persist.sys.debug.getaplog=0
+    stop getaplog
+
+on property:persist.sys.debug.getqxdmlog=1
+    setprop persist.vendor.debug.mdlog 1
+
+on property:sys.boot_completed=1 && property:persist.sys.debug.getqxdmlog=1
+    setprop persist.vendor.debug.mdlog 1
+
+on property:persist.sys.debug.getqxdmlog=0
+    setprop persist.vendor.debug.mdlog 0
+
+service gettcpdumplog /system_ext/bin/getlogext -t
+    disabled
+    user root
+    group root system oem_2901 sdcard_rw sdcard_r media_rw  shell ext_data_rw
+    oneshot
+    seclabel u:r:hmdlog:s0
+
+service  stoptcpdumplog /system_ext/bin/getlogext -p
+    disabled
+    user root
+    group root system oem_2901 sdcard_rw sdcard_r media_rw shell
+    oneshot
+    seclabel u:r:hmdlog:s0
+
+on property:persist.sys.debug.gettcpdump=1
+    restart gettcpdumplog
+
+on property:persist.sys.debug.gettcpdump=0
+    start stoptcpdumplog
+
+#on property:persist.sys.debug.gettcpdump=0
+#    stop gettcpdumplog
+
+on property:persist.sys.debug.modemcfg=*
+    setprop persist.vendor.debug.modemcfg ${persist.sys.debug.modemcfg}
+
+on property:sys.debug.move.bluetooth=1
+    exec_background - shell system -- /system/bin/mkdir /sdcard/hmdlogs/
+    exec_background - shell system -- /system/bin/chmod 0666 -R /sdcard/hmdlogs/
+    exec_background - shell bluetooth -- /system/bin/mkdir -p /sdcard/hmdlogs/bluetoothlogs
+    exec_background - shell bluetooth -- /system/bin/cp -r /data/misc/bluetooth/logs/ /sdcard/hmdlogs/bluetoothlogs
+
+
+#on property:sys.debug.anr.copyflag=1
+#    exec_background - system shell -- /system/bin/cp -r /data/anr /data/local/hmdlogs/aplog/
+
+on property:persist.sys.hmd.facebookid=*
+   setprop ro.facebook.partnerid ${persist.sys.hmd.facebookid}
+
+
+on property:persist.sys.debug.camera=1
+    setprop persist.vendor.camera.logWarningMask 0xFFFFFFFFFFFFFFFF
+    setprop persist.vendor.camera.logCoreCfgMask 0xFFFFFFFFFFFFFFFF
+    setprop vendor.debug.camera.overrideLogLevels 0x83
+    setprop persist.vendor.camera.logConfigMask 0x80
+    setprop persist.vendor.camera.logRequestMapping TRUE
+    setprop log.tag.CAM_ VERBOSE
+    restart vendor.camera-provider-2-7
+    restart cameraserver
+
+on property:persist.sys.debug.camera=0
+    setprop persist.vendor.camera.logWarningMask 0
+    setprop persist.vendor.camera.logCoreCfgMask 0
+    setprop vendor.debug.camera.overrideLogLevels 0x03
+    setprop persist.vendor.camera.logConfigMask 0
+    setprop persist.vendor.camera.logRequestMapping FALSE
+    restart vendor.camera-provider-2-7
+    restart cameraserver
+
+

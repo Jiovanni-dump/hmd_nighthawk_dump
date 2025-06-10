@@ -1,0 +1,44 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.system_ext.brand=qti
+ro.product.system_ext.device=qssi
+ro.product.system_ext.manufacturer=QUALCOMM
+ro.product.system_ext.model=qssi system image for arm64
+ro.product.system_ext.name=qssi
+ro.system_ext.build.date=Tue Mar 11 11:43:49 CST 2025
+ro.system_ext.build.date.utc=1741664629
+ro.system_ext.build.fingerprint=qti/qssi/qssi:15/AQ3A.240912.001/eng.androi.00000000.000000:user/release-keys
+ro.system_ext.build.id=AQ3A.240912.001
+ro.system_ext.build.tags=release-keys
+ro.system_ext.build.type=user
+ro.system_ext.build.version.incremental=eng.androi.00000000.000000
+ro.system_ext.build.version.release=15
+ro.system_ext.build.version.release_or_codename=15
+ro.system_ext.build.version.sdk=35
+####################################
+# from variable PRODUCT_SYSTEM_EXT_PROPERTIES
+####################################
+ro.config.services.dms_app_telemetry=true
+ro.config.services.dms2b_patch_version=1.0.0
+ro.product.carriercustomization.version=202412202022
+ro.surface_flinger.enable_frame_rate_override=false
+ro.audio.ihaladaptervendorextension_enabled=true
+bluetooth.profile.sap.server.enabled=true
+bluetooth.profile.pbap.sim.enabled=true
+bluetooth.hfp.codec_aptx_voice.enabled=true
+bluetooth.hfp.swb.aptx.power_management.enabled=true
+ro.bluetooth.leaudio_offload.supported=true
+bluetooth.device.class_of_device=90,2,12
+persist.bluetooth.leaudio_offload.disabled=false
+persist.bluetooth.leaudio.allow.multiple.context=false
+persist.bluetooth.leaudio.bypass_allow_list=true
+bluetooth.leaudio.dual_bidirection_swb.supported=true
+persist.bluetooth.leaudio.notify.idle.during.call=true
+persist.vendor.bluetooth.haltest=true
+persist.vendor.dpm.feature=11
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2
+# end of file
+

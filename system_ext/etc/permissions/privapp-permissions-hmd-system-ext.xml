@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<!--
+This XML file declares which signature|privileged permissions should be granted to privileged
+applications that come with the platform
+-->
+<!-- Add by John.ye -->
+<permissions>
+    <!-- Added by changqing for face unlock  start-->
+    <privapp-permissions package="com.hmd.face.service">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.INTERACT_ACROSS_PROFILES"/>
+    </privapp-permissions>
+    <!-- Added by changqing for face unlock  end-->
+    <!-- Added by eddie.chen for [FSW-019] Device Activation. 2024.01.30 begin -->
+    <privapp-permissions package="com.hmdglobal.app.activation">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    </privapp-permissions>
+    <!-- Added by eddie.chen for [FSW-019] Device Activation. 2024.01.30 end -->
+    <privapp-permissions package="com.hmdglobal.app.setupwizardext">
+        <permission name="android.permission.SET_TIME_ZONE"/>
+        <permission name="android.permission.STATUS_BAR"/>
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.CHANGE_CONFIGURATION"/>
+        <permission name="android.permission.SHUTDOWN"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="android.permission.DELETE_PACKAGES" />
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.DISPATCH_PROVISIONING_MESSAGE"/>
+    </privapp-permissions>
+
+    <!--add by xiaomin.zheng for TCT-2170:HMD Widget_Weather  2024.2.28 start-->
+    <privapp-permissions package="com.hmdglobal.weather">
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <!--add by xiaomin.zheng for TCT-2170:HMD Widget_Weather  2024.2.28 end-->
+    <privapp-permissions package="com.hmdglobal.support">
+       <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+    </privapp-permissions>
+ <privapp-permissions package="com.hmdglobal.app.myphonehelper">
+      <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+      <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+      <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+  </privapp-permissions>
+  
+    <privapp-permissions package="com.hmdglobal.app.fotaclient">
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.UPDATE_DEVICE_STATS"/>
+    </privapp-permissions>
+</permissions>

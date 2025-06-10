@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*****************************************************************
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ ******************************************************************/
+-->
+<permissions>
+    <privapp-permissions package="vendor.qti.bluetooth.xpan">
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" />
+        <permission name="android.permission.ACCESS_FINE_LOCATION" />
+        <permission name="android.permission.ACCESS_NETWORK_STATE" />
+        <permission name="android.permission.ACCESS_WIFI_STATE" />
+        <permission name="android.permission.CONNECTIVITY_INTERNAL" />
+        <permission name="android.permission.NETWORK_SETUP_WIZARD"/>
+        <permission name="android.permission.MAINLINE_NETWORK_STACK" />
+        <permission name="android.permission.CHANGE_WIFI_STATE" />
+        <permission name="android.permission.CHANGE_NETWORK_STATE" />
+        <permission name="android.permission.NEARBY_WIFI_DEVICES"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+        <permission name="android.permission.LOCATION_HARDWARE" />
+        <permission name="android.permission.LOCAL_MAC_ADDRESS" />
+        <permission name="android.permission.READ_WIFI_CREDENTIAL"/>
+        <permission name="android.permission.INTERNET"/>
+        <permission name="android.permission.UPDATE_DEVICE_STATS"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+        <permission name="android.permission.MANAGE_WIFI_INTERFACES"/>
+    </privapp-permissions>
+</permissions>
