@@ -1,0 +1,6 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>vendor.hmd.hardware.power</name>
+        <fqname>IHmdPowerManager/default</fqname>
+    </hal>
+</manifest>

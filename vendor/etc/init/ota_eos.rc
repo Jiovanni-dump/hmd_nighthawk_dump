@@ -1,0 +1,32 @@
+ #added by frank.song for ota oes
+
+on boot
+   setprop persist.vendor.eos.bind 0
+
+on property:persist.vendor.eos.bind=1
+    start chmod-chown-eos-sh
+
+ 
+service chmod-chown-eos-sh /vendor/bin/eos_ota_update.sh
+    class late_start
+    user root
+    group root system radio media_rw
+    seclabel u:r:eos_update_product:s0
+    oneshot
+    disabled
+ 
+on property:persist.sys.eos.bind=1
+    setprop persist.vendor.eos.bind 1
+
+on property:persist.vendor.eos.status=samever
+    setprop persist.sys.eos.bind 0
+    setprop persist.vendor.eos.bind 0
+
+on property:persist.vendor.eos.status=nonOS
+    setprop persist.sys.eos.bind 0
+    setprop persist.vendor.eos.bind 0
+
+     
+
+
+

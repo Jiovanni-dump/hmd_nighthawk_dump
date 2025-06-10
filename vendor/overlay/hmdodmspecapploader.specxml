@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config-list>
+    <config device="NHK">
+        <overlay-list>
+            <overlay status="enable" apptype="product-overlay" apppath="RRODeskClock" packageName="com.android.deskclock.overlay"/>
+            <overlay status="enable" apptype="product-overlay" apppath="RROHmdWeather" packageName="com.hmdglobal.weather.overlay"/>
+            <overlay status="enable" apptype="product-overlay" apppath="RROSystemUI" packageName="com.android.systemui.overlay"/>
+        </overlay-list>
+        <feature-list>
+            <feature name="com.hmdglobal.android.feature.5G_EXPERIENCE"/>
+            <feature name="com.hmdglobal.android.feature.YEAR2024" />
+            <feature name="com.hmdglobal.android.feature.PRODUCT_NHK"/>
+        </feature-list>
+        <apk-list>
+            <apk status="enable" apptype="product-app" apppath="OdmGetlogapk" packageName="com.log.setlog"></apk>
+            <apk status="enable" apptype="system_ext-app" apppath="HMDConsumerTrials" packageName="com.hmdglobal.app.consumertrials"></apk>
+
+            <apk status="enable" removable="true" apptype="system-app" apppath="facebook" packageName="com.facebook.katana"></apk>
+            <apk status="enable" apptype="system_ext-app" apppath="MoodsCoreService" packageName="com.hmdglobal.app.moodsservice"></apk>
+            <apk status="enable" apptype="product-app" apppath="DigitalDetox" packageName="com.hmdglobal.app.digitaldetox"></apk>
+            <apk status="enable" apptype="product-app" apppath="HMDFMRadio" packageName="com.hmdglobal.app.fmradio"></apk>
+            <apk status="enable" apptype="system-app" apppath="MyEuiccOverlayApp" packageName="com.hmdglobal.android.hmdeuiccoverlayapp.partnercustomizer"></apk>
+            <apk status="enable" apptype="system-app" apppath="PlayAutoInstallStub" packageName="android.autoinstalls.config.hmdglobal.nighthawk"></apk>
+            <apk status="enable" apptype="system-app" apppath="GmsSampleIntegration" packageName="com.hmdglobal.android.gmsintegration"></apk>
+            <apk status="enable" apptype="product-priv-app" apppath="Omacp" packageName="com.hmdglobal.app.omacp"></apk>
+        </apk-list>
+        <sub-config skuid="100IN">
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay" packageName="com.hmdglobal.android.gmsintegration.overlay"></overlay>
+            </overlay-list>
+            <feature-list>
+                <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+            </feature-list>
+            <apk-list>
+                <apk status="enable" apptype="product-priv-app" apppath="HMDIgnite" packageName="com.dti.hmdglobal"></apk>
+            </apk-list>
+            <etc-list>
+                <etc status="enable" etclocation="product" etctype="sysconfig" etcpath="whitelist_com.dti.hmdglobal.xml" packageName="com.dti.hmdglobal"></etc>
+                <etc status="enable" etclocation="product" etctype="permissions" etcpath="permission_ignite_com.dti.hmdglobal.xml" packageName="com.dti.hmdglobal"></etc>
+                <etc status="enable" etclocation="product" etctype="default-permissions" etcpath="default-permissions-com.dti.hmdglobal.xml" packageName="com.dti.hmdglobal"></etc>
+            </etc-list>
+        </sub-config>
+        <sub-config skuid="100EEA">
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay" packageName="com.hmdglobal.android.gmsintegration.overlay"></overlay>
+            </overlay-list>
+            <feature-list>
+                <feature name="android.hardware.telephony.euicc"/>
+                <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+            </feature-list>
+            <apk-list>
+                <apk status="enable" apptype="system-app" apppath="NfcSec" packageName="com.android.nfc"></apk>
+                <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+            </apk-list>
+        </sub-config>
+        <sub-config skuid="1EPEEA">
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay" packageName="com.hmdglobal.android.gmsintegration.overlay"></overlay>
+            </overlay-list>
+            <feature-list>
+                <feature name="android.hardware.telephony.euicc"/>
+                <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+            </feature-list>
+            <apk-list>
+                <apk status="enable" apptype="system-app" apppath="NfcSec" packageName="com.android.nfc"></apk>
+                <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+            </apk-list>
+        </sub-config>
+        <sub-config skuid="1XPEEA">
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay" packageName="com.hmdglobal.android.gmsintegration.overlay"></overlay>
+            </overlay-list>
+            <feature-list>
+                <feature name="android.hardware.telephony.euicc"/>
+            </feature-list>
+            <apk-list>
+                <apk status="enable" apptype="system-app" apppath="NfcSec" packageName="com.android.nfc"></apk>
+                <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+            </apk-list>
+        </sub-config>
+        <sub-config skuid="100WW">
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay" packageName="com.hmdglobal.android.gmsintegration.overlay"></overlay>
+            </overlay-list>
+            <feature-list>
+                <feature name="android.hardware.telephony.euicc"/>
+                <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+            </feature-list>
+            <apk-list>
+                <apk status="enable" apptype="system-app" apppath="NfcSec" packageName="com.android.nfc"></apk>
+                <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+            </apk-list>
+        </sub-config>
+        <sub-config skuid="1EPWW">
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay" packageName="com.hmdglobal.android.gmsintegration.overlay"></overlay>
+            </overlay-list>
+            <feature-list>
+                <feature name="android.hardware.telephony.euicc"/>
+                <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+            </feature-list>
+            <apk-list>
+                <apk status="enable" apptype="system-app" apppath="NfcSec" packageName="com.android.nfc"></apk>
+                <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+            </apk-list>
+        </sub-config>
+       <sub-config skuid="1BCWW">
+            <feature-list>
+                <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+                <feature name="android.hardware.telephony.euicc" />
+                <feature name="com.google.android.apps.dialer.call_recording_audio" />
+            </feature-list>
+            <apk-list>
+                <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="BCGames" packageName="com.focgames.barcagames"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="FCBSocis" packageName="com.slashmobility.fcbsocis"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="FCBTickets" packageName="com.fcbarcelona.eticket"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="FCBWorld" packageName="com.mcentric.mcclient.FCBWorld"></apk>
+            </apk-list>
+            <etc-list>
+                <etc status="enable" etclocation="product" etctype="default-permissions" etcpath="default-permissions-com.google.android.euicc.xml" packageName="com.google.android.euicc"></etc>
+            </etc-list>
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay1BCWW" packageName="com.hmdglobal.android.gmsintegration.bcww.overlay"></overlay>
+            </overlay-list>
+        </sub-config>
+        <sub-config skuid="1BCEEA">
+            <feature-list>
+                <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+                <feature name="android.hardware.telephony.euicc" />
+                <feature name="com.google.android.feature.EEA_DEVICE" />
+                <feature name="com.google.android.feature.EEA_V2_DEVICE" />
+                <feature name="com.google.android.paid.search" />
+                <feature name="com.google.android.paid.chrome" />
+            </feature-list>
+            <etc-list>
+                <etc status="enable" etclocation="product" etctype="sysconfig" etcpath="whitelist_de.telekom.tsc.xml" packageName="de.telekom.tsc"></etc>
+                <etc status="enable" etclocation="product" etctype="permissions" etcpath="privapp_permissions_de.telekom.tsc.xml" packageName="de.telekom.tsc"></etc>
+                <etc status="enable" etclocation="product" etctype="default-permissions" etcpath="default-permissions-com.google.android.euicc.xml" packageName="com.google.android.euicc"></etc>
+            </etc-list>
+            <apk-list>
+                <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="BCGames" packageName="com.focgames.barcagames"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="FCBSocis" packageName="com.slashmobility.fcbsocis"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="FCBTickets" packageName="com.fcbarcelona.eticket"></apk>
+                <apk status="enable" apptype="product-priv-app" apppath="FCBWorld" packageName="com.mcentric.mcclient.FCBWorld"></apk>
+            </apk-list>
+            <overlay-list>
+                <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay1BCEEA" packageName="com.hmdglobal.android.gmsintegration.bceea.overlay"></overlay>
+            </overlay-list>
+        </sub-config>
+    </config>
+</config-list>
+

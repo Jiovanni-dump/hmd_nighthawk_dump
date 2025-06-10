@@ -1,0 +1,258 @@
+{
+  "target_device": "NHK",
+  "version": "14.0220.00",
+  "release_date": "2024/07/29",
+  "payload": {
+    "selfie_night_screen_brightness": 0.8,
+    "front_cam_screen_flash": {
+      "front_screen_flash_alpha": 1.0,
+      "front_screen_flash_color": "#DDDDDD",
+      "front_screen_flash_color_step1": "#E0DDDD",
+      "front_screen_flash_color_step2": "#DDDDEE",      
+      "front_screen_flash_hollow_radius_ratio": 0.42
+    },
+    "selfie_night_screen_flash_max_alpha": 0.8,
+    "selfie_night_screen_flash_color": "#FCF5EF",
+    "front_flash_payload": [
+      {
+        "sensor_type": "1",
+        "front_flash_lux_index_range": [360, 420]
+      },
+      {
+        "sensor_type": "2",
+        "front_flash_lux_index_range": [360, 420]
+      }
+    ],    
+    "lens_hood_enable": true,
+    "lens_hood_color": "#000000",
+    "lens_hood_position_x": 360,
+    "lens_hood_position_y": 48,
+    "lens_hood_radius": 38,
+    "lens_hood_debug_view_enable": false,
+    "tae_radian_offset_threshold": 0.1,
+    "static_sensor": {
+      "enter_threshold_count_num": 5,
+      "leave_tolerant_count_num": 3,
+      "enter_accelerometer_threshold": 0.005,
+      "enter_accelerometer_tolerant":0.01,
+      "leave_gyro_threshold": 0.003,
+      "leave_gyro_tolerant": 0.01
+    },
+    "exposure_time_exp_range":[0, 220.81, 244.26, 244.26, 267.71, 267.71, 291.16, 291.16, 314.61, 338.06, 361.51, 375.22, 398.67, 439.06, 462.51, 1000],
+    "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 128, 128],
+    "exposure_time_value":[48797, 33333333, 33333333, 33333333, 33333333, 33333333, 33333333, 33333333, 33333333, 66666672, 66666672, 100000000, 100000000, 330000000, 330000000, 330000000],
+    "exposure_time_ev_num": [6, 1, 1],
+    "exposure_time_ev_weight": [1, 0.25, 0.0625],
+    "exposure_time_lux_range": [0, 140, 160, 270, 300, 360, 370, 410, 420, 460, 500, 1000],
+    "exposure_time_luma_target": [60, 60, 58, 58, 50, 50, 38, 38, 33, 33, 25, 25],
+    "flash_shot_burst_num": 5,
+    "flash_shot_burst_delay": 200,
+    "flash_shot_burst_block_flag": false,
+    "flash_shot_burst_session_limit": 2,
+    "payload": [
+      {
+        "camera_id": "0",
+        "payload": [
+          {
+            "sensor_type": "1",
+            "night_shot_interval": 4500000000,
+            "dark_vision_interval": 3500000000,
+            "quick_thumb_threshold": [
+            	{
+            	    "master_camera_id": "0",
+            	    "lux_range":[0, 300]
+            	}
+            
+            ],
+            "payload": [
+              {
+                "mode": "night_shot",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 394.73, 425.73, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 160 ,160],
+                "exposure_time_value":[54825, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 100000000, 100000000, 100000000],
+                "exposure_time_ev_num": [4, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+			                {
+                "mode": "raw_star",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 394.73, 425.73, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 160 ,160],
+                "exposure_time_value":[54825, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 100000000, 100000000, 100000000],
+                "exposure_time_ev_num": [8, 0, 0],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+              {
+                "mode": "dark_vision",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 400.89, 431.89, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 160, 160],
+                "exposure_time_value":[54825, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 120000000, 120000000, 120000000],
+                "exposure_time_ev_num": [6, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+              {
+                "mode": "tripod",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 468.11, 481.83, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 8, 8, 12, 12],
+                "exposure_time_value":[54825, 11111111, 11111111, 33333334, 33333334, 40000000, 40000000, 133333328, 133333328, 333333344, 333333344, 533333336, 533333336, 7000000000, 7000000000, 7000000000],
+                "exposure_time_ev_num": [4, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "camera_id": "1",
+        "payload": [
+          {
+            "sensor_type": "1",
+            "night_shot_interval": 2000000000,
+            "quick_thumb_threshold": [
+            	{
+            	    "master_camera_id": "1",
+            	    "lux_range":[0, 277]
+            	}
+            
+            ],
+            "payload": [
+              {
+                "mode": "night_shot",
+                "exposure_time_exp_range":[0, 169.22, 192.67, 206.39, 229.84, 236.00, 259.46, 276.74, 300.19, 307.74, 331.19, 347.09, 370.54, 393.99, 407.70, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 160, 160],
+                "exposure_time_value":[74714, 11111111, 11111111, 16666668, 16666668, 20000000, 20000000, 33333333, 33333333, 41666668, 41666668, 66666672, 66666672, 66666672, 100000000, 100000000],
+                "exposure_time_ev_num": [4, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 140, 160, 270, 300, 360, 370, 410, 420, 460, 500, 1000],
+                "exposure_time_luma_target": [65, 65, 60, 60, 50, 50, 35, 35, 25, 25, 10, 10],
+                "exposure_time_buffer": 300000000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "camera_id": "2",
+        "payload": [
+          {
+            "sensor_type": "1",
+            "quick_thumb_threshold": [
+            	{
+            	    "master_camera_id": "2",
+            	    "lux_range":[0, 277]
+            	}
+            ],
+            "payload": [
+              {
+                "mode": "night_shot",
+                "exposure_time_exp_range":[0, 188.95, 212.40, 226.12, 249.57, 255.73, 279.18, 296.47, 319.92, 327.44, 350.91, 366.81, 390.29, 403.98, 427.43, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 128, 128],
+                "exposure_time_value":[41704, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 100000000, 100000000, 100000000],
+                "exposure_time_ev_num": [4, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 80, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [63, 63, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+              {
+                "mode": "dark_vision",
+                "exposure_time_exp_range":[0, 188.95, 212.40, 226.12, 249.57, 255.73, 279.18, 296.47, 319.92, 327.44, 350.91, 366.81, 390.29, 410.15, 433.6, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 128, 128],
+                "exposure_time_value":[41704, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 120000000, 120000000, 120000000],
+                "exposure_time_ev_num": [6, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 80, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [63, 63, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+              {
+                "mode": "tripod",
+                "exposure_time_exp_range":[0, 188.95, 212.40, 226.12, 249.57, 255.73, 279.18, 296.47, 319.92, 327.44, 350.91, 366.81, 390.29, 477.36, 491.08, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 8, 8, 12, 12],
+                "exposure_time_value":[41704, 11111111, 11111111, 33333334, 33333334, 40000000, 40000000, 133333328, 133333328, 333333344, 333333344, 533333336, 533333336, 7000000000, 7000000000, 7000000000],
+                "exposure_time_ev_num": [4, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 80, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [63, 63, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "camera_id": "3",
+        "payload": [
+          {
+            "sensor_type": "1",
+			"night_shot_interval": 4500000000,
+            "dark_vision_interval": 3500000000,
+            "quick_thumb_threshold": [
+            	{
+            	    "master_camera_id": "3",
+            	    "lux_range":[0, 300]
+            	}
+            ],
+            "payload": [
+              {
+                "mode": "night_shot",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 394.73, 425.73, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 160 ,160],
+                "exposure_time_value":[54825, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 100000000, 100000000, 100000000],
+                "exposure_time_ev_num": [4, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+			                {
+                "mode": "raw_star",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 394.73, 425.73, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 160 ,160],
+                "exposure_time_value":[54825, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 100000000, 100000000, 100000000],
+                "exposure_time_ev_num": [8, 0, 0],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+              {
+                "mode": "dark_vision",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 400.89, 431.89, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, 64, 64, 160, 160],
+                "exposure_time_value":[54825, 11111111, 11111111, 16666667, 16666667, 20000000, 20000000, 33333333, 33333333, 41666667, 41666667, 66666667, 66666667, 120000000, 120000000, 120000000],
+                "exposure_time_ev_num": [6, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              },
+              {
+                "mode": "tripod",
+                "exposure_time_exp_range":[0, 179.69, 203.14, 216.86, 240.31, 246.48, 269.93, 287.21, 310.66, 318.21, 341.66, 357.56, 381.01, 468.11, 481.83, 1000],
+                "exposure_time_gain_range":[1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 8, 8, 12, 12],
+                "exposure_time_value":[54825, 11111111, 11111111, 33333334, 33333334, 40000000, 40000000, 133333328, 133333328, 333333344, 333333344, 533333336, 533333336, 7000000000, 7000000000, 7000000000],
+                "exposure_time_ev_num": [4, 1, 1],
+                "exposure_time_ev_weight": [1, 0.25, 0.0625],
+                "exposure_time_lux_range": [0, 90, 125, 165, 205, 245, 295, 365, 415, 465, 500, 1000],
+                "exposure_time_luma_target": [62, 62, 60, 58, 54, 50, 46, 40, 36, 28, 15, 15],
+                "exposure_time_buffer": 300000000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

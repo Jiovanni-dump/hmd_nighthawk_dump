@@ -1,0 +1,37 @@
+ #added by frank.song for ota custumation for MBN
+
+on property:persist.vendor.mbn.bind=1
+    start chmod-chown-mbn-sh
+ 
+on property:persist.vendor.mbn.bind=2
+    mount none /data/vendor/modem_config/mcfg_sw /vendor/firmware_mnt/image/modem_pr/mcfg/configs/mcfg_sw bind rec
+    setprop persist.vendor.mbn.bind 0
+    setprop persist.vendor.mbn.modem_restart 1
+ 
+on property:persist.vendor.mbn.modem_restart=1
+    write /sys/kernel/restart_modem 1
+    setprop persist.vendor.mbn.flag 1
+    setprop persist.vendor.mbn.modem_restart 0
+
+ 
+service chmod-chown-mbn-sh /vendor/bin/mbn_ota_customization.sh
+    class late_start
+    user root
+    group root system radio media_rw 
+    oneshot
+    disabled
+ 
+on property:persist.sys.mbn.bind=1
+    setprop persist.vendor.mbn.bind 1
+     
+on property:persist.sys.mbn.bind=2
+    setprop persist.vendor.mbn.bind 2
+
+on property:persist.sys.mbn.modem_restart=1
+    setprop persist.vendor.mbn.modem_restart 1
+
+on property:persist.sys.mbn.modem_restart=0
+    setprop persist.vendor.mbn.modem_restart 0
+
+
+

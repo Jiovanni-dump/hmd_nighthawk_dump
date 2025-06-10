@@ -1,0 +1,26 @@
+#add by jacky.wei@hmdglobal.com for catch modem log on user version
+#on early-init
+#    write /proc/sys/kernel/kptr_restrict 0
+
+# Coresight early boot service
+service qti-debug-early-boot /vendor/bin/sh /vendor/bin/init.hmd.mdlog.debug.sh
+    class core
+    user root
+    oneshot
+
+on property:persist.vendor.debug.mdlog=1 && property:sys.boot_completed=1
+    start qti-debug-early-boot
+
+on property:persist.vendor.debug.mdlog=1 && property:sys.boot_completed=1 && property:ro.boot.efusestate=fuse && property:ro.build.type=user
+    start qcomsysd
+
+on property:sys.vendor.dbg.coresight.enable=1
+    write /mnt/vendor/persist/coresight/enable 1
+
+on property:sys.vendor.dbg.coresight.enable=0
+    write /mnt/vendor/persist/coresight/enable 0
+
+on boot
+    mkdir /config/stp-policy/coresight-stm:p_basic.policy 0660 system system
+    mkdir /config/stp-policy/coresight-stm:p_basic.policy/default 0660 system system
+

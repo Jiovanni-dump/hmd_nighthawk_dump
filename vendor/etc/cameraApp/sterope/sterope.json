@@ -1,0 +1,761 @@
+{
+  "target_device": "NHK",
+  "version": "14.0220.00",
+  "release_date": "2024/08/08",
+  "payload": {
+    "enable_asd_debug": false,
+    "use_wa_solution": true,
+    "wa_night_scene_iso": 1600,
+    "wa_macro_scene_focus_distance": 9.0,
+    "ai_scene_labels": [
+      {
+        "research_id": "1",
+        "payload": {
+          "label": "Bonfire",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_event",
+          "scene_icon_res_name": "ai_scene_event",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_0"
+        }
+      },
+      {
+        "research_id": "39",
+        "payload": {
+          "label": "Cliff",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_landscape",
+          "scene_icon_res_name": "ai_scene_landscape",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_3"
+        }
+      },
+      {
+        "research_id": "46",
+        "payload": {
+          "label": "Smile",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_portrait",
+          "scene_icon_res_name": "ai_scene_portrait",
+          "prefer_capture_mode": "camera_mode_portrait",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "portait_detection_tips",
+          "prefer_tips_icon_res": "icon_more_portrait",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "48",
+        "payload": {
+          "label": "Fast food",
+          "threshold": 0.85,
+          "scene_label_res_name": "ai_scene_name_food",
+          "scene_icon_res_name": "ai_scene_food",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_2"
+        }
+      },
+      {
+        "research_id": "49",
+        "payload": {
+          "label": "Sunset",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_sunset",
+          "scene_icon_res_name": "ai_scene_sunset",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_3",
+          "tuning_params_reqired": true,
+          "show_info": false,
+          "extra_capture_params": {
+            "with_face": {
+              "extra_ev_table": [
+                "ev+",
+                "ev++"
+              ]
+            },
+            "no_face": {
+              "extra_ev_table": [
+                "ev--",
+                "ev----"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "research_id": "54",
+        "payload": {
+          "label": "Sky",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_sky",
+          "scene_icon_res_name": "ai_scene_sky",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_3"
+        }
+      },
+      {
+        "research_id": "94",
+        "payload": {
+          "label": "Bar",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_bar",
+          "scene_icon_res_name": "ai_scene_bar",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_7"
+        }
+      },
+      {
+        "research_id": "104",
+        "payload": {
+          "label": "Nightclub",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_bar",
+          "scene_icon_res_name": "ai_scene_bar",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_7"
+        }
+      },
+      {
+        "research_id": "113",
+        "payload": {
+          "label": "Cattle",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_animal",
+          "scene_icon_res_name": "ai_scene_animal",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "118",
+        "payload": {
+          "label": "Cat",
+          "threshold": 0.85,
+          "scene_label_res_name": "ai_scene_name_cat",
+          "scene_icon_res_name": "ai_scene_cat",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "123",
+        "payload": {
+          "label": "Skyline",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_sky",
+          "scene_icon_res_name": "ai_scene_sky",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_3"
+        }
+      },
+      {
+        "research_id": "184",
+        "payload": {
+          "label": "Food",
+          "threshold": 0.85,
+          "scene_label_res_name": "ai_scene_name_food",
+          "scene_icon_res_name": "ai_scene_food",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_2"
+        }
+      },
+      {
+        "research_id": "213",
+        "payload": {
+          "label": "Horse",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_animal",
+          "scene_icon_res_name": "ai_scene_animal",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "266",
+        "payload": {
+          "label": "Plant",
+          "threshold": 0.7,
+          "scene_label_res_name": "ai_scene_name_plants",
+          "scene_icon_res_name": "ai_scene_plants",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "277",
+        "payload": {
+          "label": "Pet",
+          "threshold": 0.85,
+          "scene_label_res_name": "ai_scene_name_animal",
+          "scene_icon_res_name": "ai_scene_animal",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "289",
+        "payload": {
+          "label": "Room",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_indoor",
+          "scene_icon_res_name": "ai_scene_indoor",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_0"
+        }
+      },
+      {
+        "research_id": "292",
+        "payload": {
+          "label": "Sports",
+          "threshold": 0.7,
+          "scene_label_res_name": "ai_scene_name_sport",
+          "scene_icon_res_name": "ai_scene_sport",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_0"
+        }
+      },
+      {
+        "research_id": "303",
+        "payload": {
+          "label": "Cool",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_portrait",
+          "scene_icon_res_name": "ai_scene_portrait",
+          "prefer_capture_mode": "camera_mode_portrait",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "portait_detection_tips",
+          "prefer_tips_icon_res": "icon_more_portrait",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "308",
+        "payload": {
+          "label": "Skyscraper",
+          "threshold": 0.7,
+          "scene_label_res_name": "ai_scene_name_skyscraper",
+          "scene_icon_res_name": "ai_scene_skyscraper",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_6"
+        }
+      },
+      {
+        "research_id": "319",
+        "payload": {
+          "label": "Event",
+          "threshold": 0.7,
+          "scene_label_res_name": "ai_scene_name_event",
+          "scene_icon_res_name": "ai_scene_event",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_0"
+        }
+      },
+      {
+        "research_id": "337",
+        "payload": {
+          "label": "Mountain",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_landscape",
+          "scene_icon_res_name": "ai_scene_landscape",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_3"
+        }
+      },
+      {
+        "research_id": "353",
+        "payload": {
+          "label": "Beach",
+          "threshold": 0.7,
+          "scene_label_res_name": "ai_scene_name_beach",
+          "scene_icon_res_name": "ai_scene_beach",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_3"
+        }
+      },
+      {
+        "research_id": "359",
+        "payload": {
+          "label": "Field",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_outdoor",
+          "scene_icon_res_name": "ai_scene_outdoor",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_0"
+        }
+      },
+      {
+        "research_id": "360",
+        "payload": {
+          "label": "Dog",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_dog",
+          "scene_icon_res_name": "ai_scene_dog",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "362",
+        "payload": {
+          "label": "Flower",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_flower",
+          "scene_icon_res_name": "ai_scene_flower",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "366",
+        "payload": {
+          "label": "Building",
+          "threshold": 0.6,
+          "scene_label_res_name": "ai_scene_name_building",
+          "scene_icon_res_name": "ai_scene_building",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_6"
+        }
+      },
+      {
+        "research_id": "391",
+        "payload": {
+          "label": "Flowerpot",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_plants",
+          "scene_icon_res_name": "ai_scene_plants",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "398",
+        "payload": {
+          "label": "Fireworks",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_fireworks",
+          "scene_icon_res_name": "ai_scene_fireworks",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_5"
+        }
+      },
+      {
+        "research_id": "421",
+        "payload": {
+          "label": "Baby",
+          "threshold": 0.9,
+          "scene_label_res_name": "ai_scene_name_baby",
+          "scene_icon_res_name": "ai_scene_baby",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "-1",
+          "prefer_tips_icon_res": "-1",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "439",
+        "payload": {
+          "label": "Selfie",
+          "threshold": 0.8,
+          "scene_label_res_name": "ai_scene_name_portrait",
+          "scene_icon_res_name": "ai_scene_portrait",
+          "prefer_capture_mode": "camera_mode_portrait",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "portait_detection_tips",
+          "prefer_tips_icon_res": "icon_more_portrait",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "10001",
+        "payload": {
+          "label": "wa_portrait",
+          "threshold": 0.0,
+          "scene_label_res_name": "ai_scene_name_portrait",
+          "scene_icon_res_name": "ai_scene_portrait",
+          "prefer_capture_mode": "camera_mode_portrait",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "portait_detection_tips",
+          "prefer_tips_icon_res": "icon_more_portrait",
+          "tuning_params": "param_1"
+        }
+      },
+      {
+        "research_id": "10002",
+        "payload": {
+          "label": "wa_night",
+          "threshold": 0.0,
+          "scene_label_res_name": "ai_scene_name_night",
+          "scene_icon_res_name": "ai_scene_night",
+          "prefer_capture_mode": "camera_mode_night",
+          "prefer_camera_id": -1,
+          "prefer_tips_text_res": "super_night_detection_tips",
+          "prefer_tips_icon_res": "badge_nightshot",
+          "tuning_params": "param_4"
+        }
+      },
+      {
+        "research_id": "10003",
+        "payload": {
+          "label": "wa_macro",
+          "threshold": 0.0,
+          "scene_label_res_name": "ai_scene_name_macro",
+          "scene_icon_res_name": "ic_cam_macro",
+          "prefer_capture_mode": "-1",
+          "prefer_camera_id": 4,
+          "prefer_tips_text_res": "macro_detection_tips",
+          "prefer_tips_icon_res": "icon_more_macro",
+          "tuning_params": "param_0"
+        }
+      }
+    ],
+    "camera_based_payload": [
+      {
+        "camera_id": "0",
+        "payload": [
+          {
+            "sensor_type": "1",
+            "payload": {
+              "wa_night_scene_iso": 1600,
+              "wa_macro_scene_focus_distance": 9.0,
+              "ai_scene_labels": [
+                {
+                  "research_id": "49",
+                  "payload": {
+                    "label": "Sunset",
+                    "threshold": 0.88,
+                    "scene_label_res_name": "ai_scene_name_sunset",
+                    "scene_icon_res_name": "ai_scene_sunset",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3",
+                    "tuning_params_reqired": true,
+                    "show_info": false,
+                    "extra_capture_params": {
+                      "with_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      },
+                      "no_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "research_id": "54",
+                  "payload": {
+                    "label": "Sky",
+                    "threshold": 0.9,
+                    "sub_label_ids": [49],
+                    "scene_label_res_name": "ai_scene_name_sky",
+                    "scene_icon_res_name": "ai_scene_sky",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "camera_id": "2",
+        "payload": [
+          {
+            "sensor_type": "1",
+            "payload": {
+              "wa_night_scene_iso": 1600,
+              "wa_macro_scene_focus_distance": 9.0,
+              "ai_scene_labels": [
+                {
+                  "research_id": "49",
+                  "payload": {
+                    "label": "Sunset",
+                    "threshold": 0.88,
+                    "scene_label_res_name": "ai_scene_name_sunset",
+                    "scene_icon_res_name": "ai_scene_sunset",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3",
+                    "tuning_params_reqired": true,
+                    "show_info": false,
+                    "extra_capture_params": {
+                      "with_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      },
+                      "no_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "research_id": "54",
+                  "payload": {
+                    "label": "Sky",
+                    "threshold": 0.9,
+                    "sub_label_ids": [49],
+                    "scene_label_res_name": "ai_scene_name_sky",
+                    "scene_icon_res_name": "ai_scene_sky",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "camera_id": "3",
+        "payload": [
+          {
+            "sensor_type": "1",
+            "payload": {
+              "wa_night_scene_iso": 1600,
+              "wa_macro_scene_focus_distance": 9.0,
+              "ai_scene_labels": [
+                {
+                  "research_id": "49",
+                  "payload": {
+                    "label": "Sunset",
+                    "threshold": 0.88,
+                    "scene_label_res_name": "ai_scene_name_sunset",
+                    "scene_icon_res_name": "ai_scene_sunset",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3",
+                    "tuning_params_reqired": true,
+                    "show_info": false,
+                    "extra_capture_params": {
+                      "with_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      },
+                      "no_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "research_id": "54",
+                  "payload": {
+                    "label": "Sky",
+                    "threshold": 0.9,
+                    "sub_label_ids": [49],
+                    "scene_label_res_name": "ai_scene_name_sky",
+                    "scene_icon_res_name": "ai_scene_sky",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "camera_id": "4",
+        "payload": [
+          {
+            "sensor_type": "1",
+            "payload": {
+              "wa_night_scene_iso": 1600,
+              "wa_macro_scene_focus_distance": 9.0,
+              "ai_scene_labels": [
+                {
+                  "research_id": "49",
+                  "payload": {
+                    "label": "Sunset",
+                    "threshold": 0.88,
+                    "scene_label_res_name": "ai_scene_name_sunset",
+                    "scene_icon_res_name": "ai_scene_sunset",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3",
+                    "tuning_params_reqired": true,
+                    "show_info": false,
+                    "extra_capture_params": {
+                      "with_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      },
+                      "no_face": {
+                        "ignore_ev_table": [
+                          "ev+",
+                          "ev++"
+                        ],
+                        "extra_ev_table": [
+                          "ev--",
+                          "ev---"
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "research_id": "54",
+                  "payload": {
+                    "label": "Sky",
+                    "threshold": 0.9,
+                    "sub_label_ids": [49],
+                    "scene_label_res_name": "ai_scene_name_sky",
+                    "scene_icon_res_name": "ai_scene_sky",
+                    "prefer_capture_mode": "-1",
+                    "prefer_camera_id": -1,
+                    "prefer_tips_text_res": "-1",
+                    "prefer_tips_icon_res": "-1",
+                    "tuning_params": "param_3"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

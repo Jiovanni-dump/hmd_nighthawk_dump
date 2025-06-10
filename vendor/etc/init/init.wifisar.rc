@@ -1,0 +1,15 @@
+#req Q4801-124 yuran 2022/08/31 begin
+on property:ro.vendor.boardid=*
+    setprop persist.sys.sar_boardid ${ro.vendor.boardid}
+
+service cnce_wifisar /vendor/bin/sh /vendor/bin/wifisar.sh
+    class late_start
+    user root
+    group root shell
+    disabled
+    oneshot
+
+on property:vendor.sar.wifi_backoff_info=*
+    start cnce_wifisar
+
+#req Q4801-124 yuran 2022/08/31 end

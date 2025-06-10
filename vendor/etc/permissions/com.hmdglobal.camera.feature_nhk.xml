@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<permissions>
+    <feature name="com.hmdglobal.android.feature.HMD_CAMERA_V4" />
+    
+    <feature name="com.hmdglobal.feature.camera.PROCESS_LOGICALCAM_MF_BOKEH_IN_APP" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.PROCESS_SINGLECAM_BOKEH_IN_APP" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.PROCESS_NIGHT_IN_HAL" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.PROCESS_PHOTO_SUPER_RES_IN_APP_MAIA" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.AI_SCENE_SUPPORTED" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.AI_SUPER_PORTRAIT_SUPPORTED" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.CUSTOM_OP_MODE" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.QRCODE_SUPPORTED" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.MOTION_PICTURE_SUPPORTED" version="1004"/>
+    <feature name="com.hmdglobal.feature.camera.OZO_SUPPORTED" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.PANO_MODE_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.PRO_MODE_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.NIGHT_TRIPOD_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.NIGHT_IN_HAL_YUV_OUTPUT_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.SUPER_NIGHT_UW_LENS_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.DUALSIGHT_MODE_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.VIDEO_STABILIZATION_FEATURE" />
+    <feature name="com.hmdglobal.feature.camera.HYPERLAPSE_DIV_MODE_SUPPORTED" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.AGGRESSIVE_BACKLIGHT_CONTROL_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.WHATS_NEW_PAGE_SUPPORTED" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.USE_QUICK_THUMBNAIL"/>
+    <feature name="com.hmdglobal.feature.camera.ENABLE_AUTO_NIGHT_IN_APP_MAIA"/>
+    <feature name="com.hmdglobal.feature.camera.FLASH_SHOT_MODE_SUPPORTED" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.CAPTURE_AUTO_EV_SUPPORTED"/>
+    <feature name="com.hmdglobal.feature.camera.ENABLE_GALLERY_TRANSITION"/>
+    <feature name="com.hmdglobal.feature.camera.VIDEO_RECORD_MIRROR_SUPPORTED"/>
+    <feature name="com.hmdglobal.feature.camera.FOCUS_PEAKING_SUPPORTED"/>
+    <feature name="com.hmdglobal.feature.camera.NIGHT_DARK_VISION_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.HAND_GESTURE_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.ENABLE_FLASH_SHOT_TRACKING_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.PROCESS_PHOTO_FULL_SIZE_IN_APP_MAIA" version="1003"/>
+
+    <feature name="com.hmdglobal.feature.camera.ENABLE_MODE_EDIT" />
+    <feature name="com.hmdglobal.feature.camera.ENABLE_SPIRIT_LEVEL" />
+    <feature name="com.hmdglobal.feature.camera.ENABLE_MORE_SETTING" />
+    <feature name="com.hmdglobal.feature.camera.ENABLE_NEW_WATERMARK_STYLES" version="1001"/>
+    <feature name="com.hmdglobal.feature.camera.ENABLE_AWB_WARM_UP" />
+    <feature name="com.hmdglobal.feature.camera.ENABLE_AEC_WARM_UP" />
+    <feature name="com.hmdglobal.feature.camera.ENABLE_FLASHY_OUTFIT" />
+    <feature name="com.hmdglobal.camera.DISABLE_AF_BEFORE_CAPTURE" />
+    <feature name="com.hmdglobal.feature.camera.SAT_IN_SENSOR_ZOOM_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.IQ_TUNING_BY_LUX_SUPPORTED" />
+    <feature name="com.hmdglobal.feature.camera.PRO_ULTRA_WIDE_LENS_SUPPORTED" />
+	
+</permissions>

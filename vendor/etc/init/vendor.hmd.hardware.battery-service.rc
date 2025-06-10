@@ -1,0 +1,4 @@
+service hal_vendor_hmd_hardware_battery  /vendor/bin/hw/vendor.hmd.hardware.battery-service
+    class hal
+    user root
+    group root system

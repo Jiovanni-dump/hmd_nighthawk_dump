@@ -1,0 +1,281 @@
+{
+  "config":
+  {
+    "hw_platform": ["QRD", "IDP"],
+    "soc_id": ["568"]
+  },
+    "sip3510":{
+    "owner": "sns_sip3510",
+    ".als":{
+      "owner": "sns_sip3510",
+      ".config":{
+        "owner": "sns_sip3510",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".prox":{
+      "owner": "sns_sip3510",
+      ".config":{
+        "owner": "sns_sip3510",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    }
+  },
+  "sip3510_platform":{
+    "owner": "sns_sip3510",
+    ".config":{
+      "owner": "sns_sip3510",
+      "bus_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "bus_instance":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "slave_config":{ "type": "int", "ver": "0",
+        "data": "0x58"
+      },
+      "min_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "max_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "reg_addr_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "dri_irq_num":{ "type": "int", "ver": "0",
+        "data": "58"
+      },
+      "irq_pull_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_is_chip_pin":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "irq_drive_strength":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_trigger_type":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "num_rail":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "rail_on_state":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "vdd_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vdd"
+      },
+      "vddio_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vddio"
+      },
+      "rigid_body_type":{ "type": "int", "ver": "0",
+      "data": "0"
+      }
+    },
+    ".als":{
+      "owner": "sns_sip3510",
+      ".fac_cal":{
+        "owner": "sns_sip3510",
+        "dark_ch0_scale":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "dark_ch1_scale":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "dark_lux_scale":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "light_ch0_scale":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "light_ch1_scale":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "light_lux_scale":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "target_ch0_raw":{ "type": "flt", "ver": "0",
+          "data": "50.0"
+        },
+        "target_ch1_raw":{ "type": "flt", "ver": "0",
+          "data": "10143.0"
+        },
+        "target_lux_raw":{ "type": "flt", "ver": "0",
+          "data": "500.0"
+        }
+      }
+    },
+    ".prox":{
+      "owner": "sns_sip3510",
+      ".fac_cal":{
+        "owner": "sns_sip3510",
+        "air_data":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "far_data":{ "type": "flt", "ver": "0",
+          "data": "400.0"
+        },
+        "near_data":{ "type": "flt", "ver": "0",
+          "data": "600.0"
+        }
+      }
+    },
+    ".coefficient":{
+      "owner": "sns_sip3510",
+      "k_DA_01":{ "type": "flt", "ver": "3",
+        "data": "1.0"
+      },
+      "k_DA_02":{ "type": "flt", "ver": "3",
+        "data": "0.0"
+      },
+      "k_DA_03":{ "type": "flt", "ver": "3",
+        "data": "0.0"
+      },
+      "k_DA_11":{ "type": "flt", "ver": "3",
+        "data": "1.0"
+      },
+      "k_DA_12":{ "type": "flt", "ver": "3",
+        "data": "0.0"
+      },
+      "k_DA_13":{ "type": "flt", "ver": "3",
+        "data": "0.0"
+      },
+      "k_D_01":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_D_02":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_D_03":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_D_11":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_D_12":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_D_13":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_AH_01":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_AH_02":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_AH_03":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_AH_11":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_AH_12":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_AH_13":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "t_ratio_CD":{ "type": "flt", "ver": "0",
+        "data": "0.429"
+      },
+      "t_ratio_DA":{ "type": "flt", "ver": "0",
+        "data": "1.385"
+      },
+      "t_ratio_AH":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_C_ch0":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "k_C_ch1":{ "type": "flt", "ver": "2",
+        "data": "4138.614"
+      },
+      "k_D_ch0":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "k_D_ch1":{ "type": "flt", "ver": "4",
+        "data": "3565.639"
+      },
+      "k_A_ch0":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "k_A_ch1":{ "type": "flt", "ver": "4",
+        "data": "2963.2"
+      },
+      "k_H_ch0":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "k_H_ch1":{ "type": "flt", "ver": "0",
+        "data": "-1.0"
+      },
+      "enable":{ "type": "flt", "ver": "0",
+        "data": "1.0"
+      }
+    },
+    ".proxconfig":{
+      "owner": "sns_sip3510",
+      "gain0_count":{ "type": "flt", "ver": "0",
+        "data": "3"
+      },
+      "gain1_count":{ "type": "flt", "ver": "0",
+        "data": "0"
+      },
+      "pulse_num":{ "type": "flt", "ver": "0",
+        "data": "8"
+      },
+      "drive_curr":{ "type": "flt", "ver": "0",
+        "data": "130"
+      },
+      "pulse_len":{ "type": "flt", "ver": "0",
+        "data": "80"
+      },
+      "sample_time":{ "type": "flt", "ver": "0",
+        "data": "2"
+      },
+      "period_time":{ "type": "flt", "ver": "0",
+        "data": "100"
+      },
+      "coef_offset0":{ "type": "flt", "ver": "0",
+        "data": "810.6"
+      },
+      "coef_offset1":{ "type": "flt", "ver": "0",
+        "data": "204.8"
+      },
+      "coef_offset2":{ "type": "flt", "ver": "0",
+        "data": "1.913"
+      },
+      "offset1_step":{ "type": "flt", "ver": "1",
+        "data": "4"
+      },
+      "offset1_max_range":{ "type": "flt", "ver": "1",
+        "data": "8"
+      }
+    }
+  }
+}
+

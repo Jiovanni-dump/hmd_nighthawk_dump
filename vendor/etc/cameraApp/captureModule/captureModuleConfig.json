@@ -1,0 +1,226 @@
+{
+  "targetDevice": "NHK",
+  "version": "2024.12.03",
+  "releaseDate": "2024/12/03",
+  "photoCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "photo",
+      "zoomUISpec": {
+        "isShow": true,
+        "isFrontPortraitMode": true,
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "default",
+          "zoomRatio": 1.2
+        },
+        "superResCamera": {
+          "lensType": "default",
+          "zoomRatio": 1.0
+        }
+      }
+    },
+    "back": {
+      "lensType": "mutiple",
+      "captureMode": "photo",
+      "zoomUISpec": {
+        "isShow": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "mutiple",
+          "zoomRatio": 1.0
+        },
+        "superRes3xCamera": {
+          "lensType": "mutiple",
+          "zoomRatio": 3.0
+        }
+      }
+    }
+  },
+  "videoCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "video",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "isShow": false,
+        "zoomType": "default"
+      }
+    },
+    "back": {
+      "lensType": "default",
+      "captureMode": "video",
+      "zoomUISpec": {
+        "isShow": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "default",
+          "zoomRatio": 1.0
+        },
+        "superRes3xCamera": {
+          "lensType": "default",
+          "zoomRatio": 3.0
+        }
+      }
+    }
+  },
+  "nightCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "night_in_hal",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "isShow": false
+      }
+    },
+    "back": {
+      "lensType": "default",
+      "captureMode": "night_in_hal",
+      "zoomUISpec": {
+        "isShow": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "default",
+          "zoomRatio": 1.0
+        },
+        "superRes3xCamera": {
+          "lensType": "default",
+          "zoomRatio": 3.0
+        }
+      }
+    }
+  },
+  "flashshotCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "flash_shot",
+      "zoomUISpec": {
+        "isShow": false
+      }
+    },
+    "back": {
+      "lensType": "default",
+      "captureMode": "flash_shot",
+      "zoomUISpec": {
+        "isShow": true,
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "default",
+          "zoomRatio": 1.0
+        },
+        "superRes3xCamera": {
+          "lensType": "default",
+          "zoomRatio": 3.0
+        }
+      }
+    }
+  },
+  "proCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "profession",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "isShow": false
+      }
+    },
+    "back": {
+      "lensType": "default",
+      "captureMode": "profession",
+      "zoomUISpec": {
+        "isShow": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "default",
+          "zoomRatio": 1.0
+        },
+        "superRes3xCamera": {
+          "lensType": "default",
+          "zoomRatio": 3.0
+        }
+      }
+    }
+  },
+  "timelapseCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "single_timelapse",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "isShow": false
+      }
+    },
+    "back": {
+      "lensType": "default",
+      "captureMode": "single_timelapse",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isShow": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "default",
+          "zoomRatio": 1.0
+        },
+        "superRes3xCamera": {
+          "lensType": "default",
+          "zoomRatio": 3.0
+        }
+      }
+    }
+  },
+  "slowmotionCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "slow_motion",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "isShow": false
+      }
+    },
+    "back": {
+      "lensType": "default",
+      "captureMode": "slow_motion",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "isShow": false
+      }
+    }
+  },
+  "iqdebugCaptureModuleConfig": {
+    "front": {
+      "lensType": "default",
+      "captureMode": "iq_debug",
+      "zoomUISpec": {
+        "isGestureDisabled": true,
+        "isLongClickDisabled": true,
+        "isShow": false
+      }
+    },
+    "back": {
+      "lensType": "mutiple",
+      "captureMode": "iq_debug",
+      "zoomUISpec": {
+        "isShow": true,
+        "zoomType": "default",
+        "normalCamera": {
+          "lensType": "mutiple",
+          "zoomRatio": 1.0
+        },
+        "superRes3xCamera": {
+          "lensType": "mutiple",
+          "zoomRatio": 3.0
+        }
+      }
+    }
+  }
+}

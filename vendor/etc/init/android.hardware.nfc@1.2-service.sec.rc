@@ -1,0 +1,18 @@
+on boot
+    chown nfc nfc /dev/sec-nfc
+    chmod 0776 /dev/sec-nfc
+
+service sec_nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.sec
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+service init_check_nfc_vendor /vendor/bin/hw/init_check_nfc_vendor.sh
+    class hal
+    user nfc
+    group nfc
+    oneshot
+
+on property:persist.vendor.nfc.chip.type=sec
+   start sec_nfc_hal_service

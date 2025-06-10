@@ -1,0 +1,26 @@
+# Add by zhangting for SQ503-162 on 20240506 begin
+on property:persist.sys.simstate=*
+    setprop persist.vendor.simstate ${persist.sys.simstate}
+# Add by zhangting for SQ503-162 on 20240506 end
+
+# Add by zhangting for NHK-505 on 20240509 begin
+# Modify by zhangting for NHK-3881 on 20240607 begin
+on property:ro.boot.simslot=SS
+    setprop persist.radio.multisim.config dsds
+on property:ro.boot.simslot=ss
+    setprop persist.radio.multisim.config dsds
+# Modify by zhangting for NHK-3881 on 20240607 end
+on property:ro.boot.simslot=SP
+    setprop persist.radio.multisim.config ssss
+on property:ro.boot.simslot=sp
+    setprop persist.radio.multisim.config ssss
+on property:ro.boot.simslot=DS
+    setprop persist.radio.multisim.config dsds
+on property:ro.boot.simslot=ds
+    setprop persist.radio.multisim.config dsds
+on property:ro.boot.simslot=DP
+    setprop persist.radio.multisim.config dsds
+on property:ro.boot.simslot=dp
+    setprop persist.radio.multisim.config dsds
+# Add by zhangting for NHK-505 on 20240509 end
+

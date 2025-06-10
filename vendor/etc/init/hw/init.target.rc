@@ -1,0 +1,287 @@
+
+# Copyright (c) 2019-2021, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+
+import /vendor/etc/init/hw/init.qti.kernel.rc
+
+on early-init
+    write /proc/sys/kernel/printk_devkmsg ratelimited
+    export MEMTAG_OPTIONS off
+
+on init
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
+    chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
+    start logd
+
+on early-fs
+    start vold
+
+on fs
+    start hwservicemanager
+    mount_all --early
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+
+on fs && property:ro.boot.product.vendor.sku=taro
+    mkdir /mnt/vendor/spunvm 0660 system system
+    wait /dev/block/bootdevice/by-name/spunvm
+    mount vfat /dev/block/bootdevice/by-name/spunvm /mnt/vendor/spunvm rw noatime shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:vendor_spunvm_file:s0
+
+on post-fs
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
+
+on late-fs
+    wait_for_prop hwservicemanager.ready true
+    #exec_start wait_for_keymaster
+    mount_all --late
+
+on post-fs-data
+    #Factory
+    chown root system /dev/block/sda3
+    chmod 0660 /dev/block/sda3
+
+    #private
+    chown root system /dev/block/sdg3
+    chmod 0760 /dev/block/sdg3
+
+    #oemowninfo
+    chown root system /dev/block/sda5
+    chmod 0760 /dev/block/sda5
+
+    #Calibration
+    mkdir /mnt/vendor/persist/camera
+    chown root camera /mnt/vendor/persist/camera
+    chmod 0774 /mnt/vendor/persist/camera
+
+    #req NHK-493,hezhigang,20240403,add,begin
+    chown system system /sys/hwinfo/board_id
+    chmod 0755 /sys/hwinfo/board_id
+    #req NHK-493,hezhigang,20240403,add,end
+    mkdir /vendor/data/tombstones 0771 system system
+    # HMD One single image begin
+    mount none /data/lost+found /odm/100WW bind rec
+    mount none /data/lost+found /odm/100EEA bind rec
+    mount none /data/lost+found /odm/100IN bind rec
+    mount none /data/lost+found /odm/6000F bind rec
+    mount none /data/lost+found /odm/1EPEEA bind rec
+    mount none /data/lost+found /odm/1EPWW bind rec
+    mount none /data/lost+found /odm/1XPEEA bind rec
+    umount /vendor/odm/${ro.boot.skuid}
+    mount none /odm/${ro.boot.skuid}/media /odm/media bind rec
+    mount none /odm/${ro.boot.skuid}/app /odm/hmd_custom/app bind rec
+    mount none /odm/${ro.boot.skuid}/priv-app /odm/hmd_custom/priv-app bind rec
+    mount none /odm/${ro.boot.skuid}/overlay /odm/hmd_custom/overlay bind rec
+    mount none /odm/${ro.boot.skuid}/etc /odm/hmd_custom/etc bind rec
+
+    mount none /data/lost+found /product/100WW bind rec
+    mount none /data/lost+found /product/100EEA bind rec
+    mount none /data/lost+found /product/100IN bind rec
+    mount none /data/lost+found /product/6000F bind rec
+    mount none /data/lost+found /product/1EPWW bind rec
+    mount none /data/lost+found /product/1EPEEA bind rec
+    mount none /data/lost+found /product/1XPEEA bind rec
+    umount /product/${ro.boot.skuid}
+    mount none /product/${ro.boot.skuid}/app /product/hmd_custom/app bind rec
+    mount none /product/${ro.boot.skuid}/priv-app /product/hmd_custom/priv-app bind rec
+    mount none /product/${ro.boot.skuid}/overlay /product/hmd_custom/overlay bind rec
+    mount none /product/${ro.boot.skuid}/etc /product/hmd_custom/etc bind rec
+    mount none /product/${ro.boot.skuid}/media /product/hmd_custom/media bind rec
+    # HMD One single image end
+    # Enable WLAN cold boot calibration
+    write /sys/kernel/cnss/fs_ready 1
+    # Added by junyu.dong for NHK-482 on 2024-04-07 begin
+    mkdir /mnt/vendor/persist/audio
+    chown system system /mnt/vendor/persist/audio
+    chmod 0777 /vendor/bin/aw882xx_cali
+    chmod 0777 dev/aw882xx_smartpa
+    # Added by junyu.dong for NHK-5710 on 2024-09-19 begin
+    chmod 0644 /mnt/vendor/persist/audio/aw_cali.bin
+    # Added by junyu.dong for NHK-5710 on 2024-09-19 end
+    # Added by junyu.dong for NHK-482 on 2024-04-07 end
+    # Added by junyu.dong for NHK-482 on 2024-04-09 begin
+    chown media audio /sys/devices/platform/soc/soc:hac_switch/settings
+    chown media audio /sys/devices/platform/soc/soc:hac_switch/active
+    # Added by junyu.dong for NHK-482 on 2024-04-09 end
+    # Added by wei1.li for NHK-491 on 2024-05-13
+    chmod 0660 /sys/class/qcom-battery/pm7250b_charger_en
+
+on early-boot
+    start vendor.sensors
+    verity_update_state
+
+on boot
+    write /dev/cpuset/audio-app/cpus 1-2
+    # Add a cpuset for the camera daemon
+    # We want all cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0-7
+    write /dev/cpuset/camera-daemon/mems 0
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
+    chmod 0660 /dev/cpuset/camera-daemon/tasks
+    chown system /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
+    chmod 0660 /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
+    chown system /sys/devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_enable
+    chmod 0660 /sys/devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_enable
+    chown system /sys/devices/system/cpu/hyp_core_ctl/enable
+    chown system /sys/devices/system/cpu/hyp_core_ctl/hcc_min_freq
+    #USB controller configuration
+    setprop vendor.usb.controller a600000.dwc3
+    # NHK-487,hezhigang,20240528,begin
+    wait  /dev/block/bootdevice/by-name/elabelinfo
+    mount ext4 /dev/block/bootdevice/by-name/elabelinfo /elabel rw wait noatime
+    mount ext4 /dev/block/bootdevice/by-name/elabelinfo /elabel ro wait noatime
+    chown system system /elabel
+    chmod 0775 /elabel
+    restorecon_recursive /elabel
+    # NHK-487,hezhigang,20240528,end
+
+# NHK-765,config max charge percentage,add
+#on property:persist.sys.battery.percentage=*
+#     write /sys/class/qcom-battery/max_soc_limit ${persist.sys.battery.percentage}
+
+    #Add-begin by ning.wei@hmd for TP double click
+    chown system system /sys/devices/platform/tp_gesture/gesture_en
+    chmod 0666 /sys/devices/platform/tp_gesture/gesture_en
+    #Add-end by ning.wei@hmd for TP double click
+
+    # ning.wei@hmd++
+    chown system /sys/class/qcom-battery/max_soc_limit
+    chmod 0660 /sys/class/qcom-battery/max_soc_limit
+    chown system /sys/class/qcom-battery/max_icharging_limit
+    chmod 0660 /sys/class/qcom-battery/max_icharging_limit
+    chown system /sys/class/qcom-battery/sn_validate
+    chmod 0660 /sys/class/qcom-battery/sn_validate
+    chown system /sys/class/qcom-battery/soh
+    chmod 0660 /sys/class/qcom-battery/soh
+
+
+on property:vendor.display.lcd_density=560
+   setprop dalvik.vm.heapgrowthlimit 256m
+
+on property:vendor.display.lcd_density=640
+   setprop dalvik.vm.heapgrowthlimit 512m
+
+#NHK-2799 for esim update ling.yi begin
+service eos_update_product /vendor/bin/hw/eos_update_product
+    class main
+    user root
+    group root shell system radio
+    seclabel u:r:eos_update_product:s0
+    oneshot
+
+# NHK-2799 for esim update ling.yi end
+
+on init && property:ro.boot.mode=charger
+    wait_for_prop vendor.all.modules.ready 1
+    mount_all /vendor/etc/charger_fw_fstab.qti --early
+    wait /sys/kernel/boot_adsp/boot
+    write /sys/kernel/boot_adsp/boot 1
+
+on charger
+    start vendor.power_off_alarm
+    setprop sys.usb.controller a600000.dwc3
+    wait /sys/class/udc/${sys.usb.controller}
+    setprop sys.usb.configfs 1
+
+on property:sys.boot_completed=1
+    chmod 0666 /sys/class/power_supply/usb/authentic
+
+#service vendor.lowi /vendor/bin/sscrpcd
+#   class core
+#   user system
+#   group system wakelock
+#   capabilities BLOCK_SUSPEND
+
+#pd-mapper
+service vendor.pd_mapper /vendor/bin/pd-mapper
+    class core
+    user system
+    group system
+
+#Peripheral manager
+service vendor.per_mgr /vendor/bin/pm-service
+    class core
+    user system
+    group system
+    ioprio rt 4
+
+service vendor.per_proxy /vendor/bin/pm-proxy
+    class core
+    user system
+    group system
+    disabled
+
+#service vendor.mdm_helper /vendor/bin/mdm_helper
+#    class core
+#    group system wakelock
+#    disabled
+
+service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
+    class core
+    oneshot
+
+on property:init.svc.vendor.per_mgr=running
+    start vendor.per_proxy
+
+on property:sys.shutdown.requested=*
+    write /sys/kernel/qcom_rproc/shutdown_in_progress 1
+    stop vendor.per_proxy
+
+on property:vold.decrypt=trigger_restart_framework
+   start vendor.cnss_diag
+
+service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
+   class main
+   user system
+   group system wifi inet sdcard_rw media_rw diag
+   oneshot
+
+on early-boot && property:persist.vendor.pcie.boot_option=*
+    write /sys/bus/platform/devices/1c00000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
+    write /sys/bus/platform/devices/1c08000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
+
+on property:vendor.post_boot.parsed=1
+    enable vendor.qvirtmgr
+    start  vendor.qvirtmgr
+
+# zsh,20240508,add,begin
+on property:sys.boost.mode=*
+    setprop persist.vendor.sunlight.mode ${sys.boost.mode}
+on property:persist.vendor.sunlight.mode=1
+   write /sys/class/leds/sunlight_led/brightness 1
+on property:persist.vendor.sunlight.mode=0
+   write /sys/class/leds/sunlight_led/brightness 0
+# zsh,20240508,add,end
+

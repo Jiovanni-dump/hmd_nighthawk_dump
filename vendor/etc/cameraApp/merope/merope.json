@@ -1,0 +1,144 @@
+{
+  "target_device": "NHK",
+  "version": "10.1001.01",
+  "release_date": "2024/06/05",
+  "payload": [
+    {
+      "camera_id": "0",
+      "payload": [
+        {
+          "sensor_type": "1",
+          "force_night_mode_iso": 1600,
+          "night_threshold":[
+          	{
+          	  "master_camera_id": "0",
+          	  "force_auto_night_lux_range": [340, 350],
+          	  "dark_vision_lux_range": [390, 410]
+          	}
+          ],
+          "max_post_raw_sensitivity_boost": -1,
+          "ai_portrait_threshold": [0, 2],
+          "ai_portrait_project_name": "hmd_nighthawk_sm4450",
+          "blur_params": [
+            {
+              "spot_type": "DSLR",
+              "payload": {
+                "bokeh_module_name": ["s0_camera_param", "s0_camera_param"],
+                "bokeh_1x_2x_rotation_overlay": [270, 270, 270, 270, 0, 0, 0, 0],
+                "blur_strength": [16, 6.77, 4.29, 2.48, 2.05, 1.74, 1.51, 1.34, 1.20, 1.09, 1.0]
+              }
+            }
+          ],
+          "payload": [
+          ]
+        }
+      ]
+    },
+    {
+      "camera_id": "1",
+      "payload": [
+        {
+          "sensor_type": "1",
+          "night_threshold":[
+          	{
+          	  "master_camera_id": "1",
+          	  "force_auto_night_lux_range": [360, 380],
+          	  "dark_vision_lux_range": [250, 280]
+          	}
+          
+          ],
+          "max_post_raw_sensitivity_boost": -1,
+          "ai_portrait_threshold": [0, 2],
+          "blur_params": [
+            {
+              "spot_type": "DSLR",
+              "payload": {
+                "bokeh_module_name": ["s0_camera_param", "s0_camera_param"],
+                "bokeh_1x_2x_rotation_overlay": [270, 270, 270, 270, 0, 0, 0, 0],
+                "blur_strength": [16, 7.22, 5.29, 3.48, 2.45, 2.05, 1.71, 1.44, 1.29, 1.11, 1.0]
+              }
+            }
+          ],
+          "payload": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "camera_id": "2",
+      "payload": [
+        {
+          "sensor_type": "1",
+	      "night_threshold":[
+          	{
+          	  "master_camera_id": "2",
+          	  "force_auto_night_lux_range": [340, 350],
+          	  "dark_vision_lux_range": [390, 410]
+          	}
+          ],
+          "max_post_raw_sensitivity_boost": -1,
+          "ai_portrait_threshold": [0, 2],
+          "payload": [
+          ]
+        }
+      ]
+    },
+    {
+      "camera_id": "3",
+      "payload": [
+        {
+          "sensor_type": "1",
+          "force_night_mode_iso": 1600,
+          "night_threshold":[
+          	{
+          	  "master_camera_id": "3",
+          	  "force_auto_night_lux_range": [340, 350],
+          	  "dark_vision_lux_range": [390, 410]
+          	}
+          ],
+          "max_post_raw_sensitivity_boost": -1,
+          "ai_portrait_threshold": [0, 2],
+          "ai_portrait_project_name": "hmd_nighthawk_sm4450",
+          "drchecker_threshold": [200, 140, 60, 150],
+          "blur_params": [
+            {
+              "spot_type": "DSLR",
+              "payload": {
+                "bokeh_module_name": ["s0_camera_param", "s0_camera_param"],
+                "bokeh_1x_2x_rotation_overlay": [0, 0, 0, 0, 0, 0, 0, 0],
+                "blur_strength": [16, 14.77, 11.29, 10.86, 7.15, 6.85, 5.51, 4.34, 3.20, 2.09, 1.0]
+              }
+            }
+          ],
+          "payload": [
+            {
+              "lux_index_range": "10,1000",
+              "payload": {
+                "drchecker_threshold_by_lux": [200, 100, 60, 150],
+                "capture_params": {
+                  "with_face": {
+                    "ev0": 0.0,
+                    "ev0_num": 1,
+                    "ev-": -2.0,
+                    "ev-_num": 1,
+                    "ev--": -4.0,
+                    "ev--_num": 1
+                  },
+                  "no_face": {
+                    "ev0": 0.0,
+                    "ev0_num": 1,
+                    "ev-": -2.0,
+                    "ev-_num": 1,
+                    "ev--": -4.0,
+                    "ev--_num": 1
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

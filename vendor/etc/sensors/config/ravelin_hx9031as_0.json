@@ -1,0 +1,252 @@
+{
+  "config":{
+    "hw_platform": ["QRD", "IDP"],
+    "soc_id": ["568"]
+  },
+  "hx9031as":{
+    "owner": "hx9031as",
+    ".sar":{
+      "owner": "hx9031as",
+      ".config":{
+        "owner": "hx9031as",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    }
+  },
+  "hx9031as_0_platform":{
+    "owner": "sns_hx9031as",
+    ".config":{
+      "owner": "sns_hx9031as",
+      "bus_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "bus_instance":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "slave_config":{ "type": "int", "ver": "0",
+        "data": "40"
+      },
+      "max_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "reg_addr_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "dri_irq_num":{ "type": "int", "ver": "0",
+        "data": "57"
+      },
+      "irq_pull_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_is_chip_pin":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "irq_drive_strength":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_trigger_type":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "num_rail":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "rail_on_state":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "vddio_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vddio"
+      },
+      "rigid_body_type":{ "type": "int", "ver": "0",
+      "data": "0"
+      }
+    },
+    ".placement":{
+      "owner": "sns_hx9031as",
+      "0":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "1":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "2":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "3":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "4":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "5":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "6":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "7":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "8":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "9":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "10":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "11":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      }
+    },
+
+    ".workflow":{
+	"owner": "sns_hx9031as",
+	"G_FLAG_01":{ "type": "int", "ver": "0","data": "11"},
+	"G_FLAG_02":{ "type": "int", "ver": "0","data": "22"},
+	"G_FLAG_03":{ "type": "int", "ver": "0","data": "33"},
+	"G_FLAG_04":{ "type": "int", "ver": "0","data": "44"},
+	"G_FLAG_05":{ "type": "int", "ver": "0","data": "55"}
+    },
+
+	".register":{
+	  "owner": "sns_hx9031as",
+	  "Is_config":{ "type": "int", "ver": "2",
+		"data": "1"
+	  },
+      "R_000_0x24":{ "type": "int", "ver": "2","data": "0x24"},
+	  "V_000_0x24":{ "type": "int", "ver": "2","data": "0x00"},
+      "R_001_0x00":{ "type": "int", "ver": "2","data": "0x00"},
+	  "V_001_0x00":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_002_0x23":{ "type": "int", "ver": "2","data": "0x23"},
+	  "V_002_0x23":{ "type": "int", "ver": "2","data": "0x07"},
+	  "R_003_0x02":{ "type": "int", "ver": "2","data": "0x02"},
+	  "V_003_0x02":{ "type": "int", "ver": "2","data": "0x16"},
+	  "R_004_0x0D":{ "type": "int", "ver": "2","data": "0x0D"},
+	  "V_004_0x0D":{ "type": "int", "ver": "2","data": "0x01"},
+	  "R_005_0x0E":{ "type": "int", "ver": "2","data": "0x0E"},
+	  "V_005_0x0E":{ "type": "int", "ver": "2","data": "0x02"},
+      "R_006_0x0F":{ "type": "int", "ver": "2","data": "0x0F"},
+	  "V_006_0x0F":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_007_0x10":{ "type": "int", "ver": "2","data": "0x10"},
+	  "V_007_0x10":{ "type": "int", "ver": "2","data": "0x91"},
+	  "R_008_0x11":{ "type": "int", "ver": "2","data": "0x11"},
+	  "V_008_0x11":{ "type": "int", "ver": "2","data": "0x44"},
+	  "R_009_0x12":{ "type": "int", "ver": "2","data": "0x12"},
+	  "V_009_0x12":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_010_0x13":{ "type": "int", "ver": "2","data": "0x13"},
+	  "V_010_0x13":{ "type": "int", "ver": "2","data": "0x33"},
+	  "R_011_0x14":{ "type": "int", "ver": "2","data": "0x14"},
+	  "V_011_0x14":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_012_0x1F":{ "type": "int", "ver": "2","data": "0x1F"},
+	  "V_012_0x1F":{ "type": "int", "ver": "2","data": "0x21"},
+	  "R_013_0x21":{ "type": "int", "ver": "2","data": "0x21"},
+	  "V_013_0x21":{ "type": "int", "ver": "2","data": "0x21"},
+	  "R_014_0x2A":{ "type": "int", "ver": "2","data": "0x2A"},
+	  "V_014_0x2A":{ "type": "int", "ver": "2","data": "0x33"},
+	  "R_015_0x2B":{ "type": "int", "ver": "2","data": "0x2B"},
+	  "V_015_0x2B":{ "type": "int", "ver": "2","data": "0x13"},
+      "R_016_0x29":{ "type": "int", "ver": "2","data": "0x29"},
+	  "V_016_0x29":{ "type": "int", "ver": "2","data": "0x01"},
+	  "R_017_0x2C":{ "type": "int", "ver": "2","data": "0x2C"},
+	  "V_017_0x2C":{ "type": "int", "ver": "2","data": "0x88"},
+	  "R_018_0x2D":{ "type": "int", "ver": "2","data": "0x2D"},
+	  "V_018_0x2D":{ "type": "int", "ver": "2","data": "0x88"},
+      "R_019_0x2E":{ "type": "int", "ver": "2","data": "0x2E"},
+	  "V_019_0x2E":{ "type": "int", "ver": "2","data": "0x18"},
+	  "R_020_0x2F":{ "type": "int", "ver": "2","data": "0x2F"},
+	  "V_020_0x2F":{ "type": "int", "ver": "2","data": "0x11"},
+      "R_021_0x30":{ "type": "int", "ver": "2","data": "0x30"},
+	  "V_021_0x30":{ "type": "int", "ver": "2","data": "0x11"},
+	  "R_022_0x38":{ "type": "int", "ver": "2","data": "0x38"},
+	  "V_022_0x38":{ "type": "int", "ver": "2","data": "0xF0"},
+	  "R_023_0x39":{ "type": "int", "ver": "2","data": "0x39"},
+	  "V_023_0x39":{ "type": "int", "ver": "2","data": "0xFF"},
+      "R_024_0x3A":{ "type": "int", "ver": "2","data": "0x3A"},
+	  "V_024_0x3A":{ "type": "int", "ver": "2","data": "0x3B"},
+	  "R_025_0x3B":{ "type": "int", "ver": "2","data": "0x3B"},
+	  "V_025_0x3B":{ "type": "int", "ver": "2","data": "0x07"},
+      "R_026_0x3C":{ "type": "int", "ver": "2","data": "0x3C"},
+	  "V_026_0x3C":{ "type": "int", "ver": "2","data": "0x21"},
+	  "R_027_0x6C":{ "type": "int", "ver": "2","data": "0x6C"},
+	  "V_027_0x6C":{ "type": "int", "ver": "2","data": "0x01"},
+	  "R_028_0x6D":{ "type": "int", "ver": "2","data": "0x6D"},
+	  "V_028_0x6D":{ "type": "int", "ver": "2","data": "0x01"},
+	  "R_029_0x80":{ "type": "int", "ver": "2","data": "0x80"},
+	  "V_029_0x80":{ "type": "int", "ver": "2","data": "0x07"},
+	  "R_030_0x81":{ "type": "int", "ver": "2","data": "0x81"},
+	  "V_030_0x81":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_031_0x82":{ "type": "int", "ver": "2","data": "0x82"},
+	  "V_031_0x82":{ "type": "int", "ver": "2","data": "0x04"},
+	  "R_032_0x83":{ "type": "int", "ver": "2","data": "0x83"},
+	  "V_032_0x83":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_033_0x84":{ "type": "int", "ver": "2","data": "0x84"},
+	  "V_033_0x84":{ "type": "int", "ver": "2","data": "0x07"},
+	  "R_034_0x85":{ "type": "int", "ver": "2","data": "0x85"},
+	  "V_034_0x85":{ "type": "int", "ver": "2","data": "0x00"},
+      "R_035_0x86":{ "type": "int", "ver": "2","data": "0x86"},
+	  "V_035_0x86":{ "type": "int", "ver": "2","data": "0xFF"},
+      "R_036_0x87":{ "type": "int", "ver": "2","data": "0x87"},
+	  "V_036_0x87":{ "type": "int", "ver": "2","data": "0x03"},
+      "R_037_0x9E":{ "type": "int", "ver": "2","data": "0x9E"},
+	  "V_037_0x9E":{ "type": "int", "ver": "2","data": "0xFF"},
+      "R_038_0x9F":{ "type": "int", "ver": "2","data": "0x9F"},
+	  "V_038_0x9F":{ "type": "int", "ver": "2","data": "0x03"},
+	  "R_039_0x88":{ "type": "int", "ver": "2","data": "0x88"},
+	  "V_039_0x88":{ "type": "int", "ver": "2","data": "0x05"},
+	  "R_040_0x89":{ "type": "int", "ver": "2","data": "0x89"},
+	  "V_040_0x89":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_041_0x8A":{ "type": "int", "ver": "2","data": "0x8A"},
+	  "V_041_0x8A":{ "type": "int", "ver": "2","data": "0x03"},
+	  "R_042_0x8B":{ "type": "int", "ver": "2","data": "0x8B"},
+	  "V_042_0x8B":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_043_0x8C":{ "type": "int", "ver": "2","data": "0x8C"},
+	  "V_043_0x8C":{ "type": "int", "ver": "2","data": "0x05"},
+	  "R_044_0x8D":{ "type": "int", "ver": "2","data": "0x8D"},
+	  "V_044_0x8D":{ "type": "int", "ver": "2","data": "0x00"},
+      "R_045_0x8E":{ "type": "int", "ver": "2","data": "0x8E"},
+	  "V_045_0x8E":{ "type": "int", "ver": "2","data": "0xFF"},
+	  "R_046_0x8F":{ "type": "int", "ver": "2","data": "0x8F"},
+	  "V_046_0x9F":{ "type": "int", "ver": "2","data": "0x03"},
+      "R_047_0xA2":{ "type": "int", "ver": "2","data": "0xA2"},
+	  "V_047_0xA2":{ "type": "int", "ver": "2","data": "0xFF"},
+	  "R_048_0xA3":{ "type": "int", "ver": "2","data": "0xA3"},
+	  "V_048_0xA3":{ "type": "int", "ver": "2","data": "0x03"},
+	  "R_049_0xA8":{ "type": "int", "ver": "2","data": "0xA8"},
+	  "V_049_0xA8":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_050_0xA9":{ "type": "int", "ver": "2","data": "0xA9"},
+	  "V_050_0xA9":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_051_0xAA":{ "type": "int", "ver": "2","data": "0xAA"},
+	  "V_051_0xAA":{ "type": "int", "ver": "2","data": "0x00"},
+      "R_052_0xAB":{ "type": "int", "ver": "2","data": "0xAB"},
+	  "V_052_0xAB":{ "type": "int", "ver": "2","data": "0x00"},
+      "R_053_0xAC":{ "type": "int", "ver": "2","data": "0xAC"},
+	  "V_053_0xAC":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_054_0xC0":{ "type": "int", "ver": "2","data": "0xC0"},
+	  "V_054_0xC0":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_055_0xC1":{ "type": "int", "ver": "2","data": "0xC1"},
+	  "V_055_0xC1":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_056_0xC4":{ "type": "int", "ver": "2","data": "0xC4"},
+	  "V_056_0xC4":{ "type": "int", "ver": "2","data": "0x00"},
+      "R_057_0xC5":{ "type": "int", "ver": "2","data": "0xC5"},
+	  "V_057_0xC5":{ "type": "int", "ver": "2","data": "0x00"},
+      "R_058_0xC7":{ "type": "int", "ver": "2","data": "0xC7"},
+	  "V_058_0xC7":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_058_0xC8":{ "type": "int", "ver": "2","data": "0xC8"},
+	  "V_058_0xC8":{ "type": "int", "ver": "2","data": "0x00"},
+	  "R_060_0xCA":{ "type": "int", "ver": "2","data": "0xCA"},
+	  "V_060_0xCA":{ "type": "int", "ver": "2","data": "0x00"}
+	}
+  }
+}

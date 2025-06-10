@@ -1,0 +1,99 @@
+on post-fs-data
+        #Create SWAP related dirs
+        mkdir /data/vendor/swap 0770 root system
+        chmod 2770 /data/vendor/swap
+ 
+ 
+ 
+service kernel-bootvram /vendor/bin/sh /vendor/bin/init.kernel.post_bootvram.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+    
+
+service kernel-vramswappwd /vendor/bin/sh /vendor/bin/init.kernel.vram_swappwd.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot       
+    
+    
+service kernel-zramcfg /vendor/bin/sh /vendor/bin/init.kernel.post_bootzram.sh
+     class core
+     user root
+     group root system 
+     disabled
+     oneshot    
+
+service kernel-createvramfiles /vendor/bin/sh /vendor/bin/init.kernel.create_vramfile.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot        
+   
+
+# this is for sys app     
+on property:persist.sys.vramenable=true
+     setprop persist.vendor.vramenable true   
+
+on property:persist.sys.vramenable=false
+     setprop persist.vendor.vramenable false         
+
+# this is for sys app     
+on property:persist.sys.vramsize=1024M
+     setprop persist.vendor.vramsize 1024   
+
+# this is for sys app     
+on property:persist.sys.vramsize=2048M
+     setprop persist.vendor.vramsize 2048   
+
+# this is for sys app     
+on property:persist.sys.vramsize=3072M
+     setprop persist.vendor.vramsize 3072   
+
+# this is for sys app     
+on property:persist.sys.vramsize=4096M
+     setprop persist.vendor.vramsize 4096   
+
+# this is for sys app     
+on property:persist.sys.vramsize=5120M
+     setprop persist.vendor.vramsize 5120  
+
+# this is for sys app     
+on property:persist.sys.vramsize=6144M
+     setprop persist.vendor.vramsize 6144  
+
+# this is for sys app
+on property:persist.sys.vramsize=7168M
+     setprop persist.vendor.vramsize 7168
+
+# this is for sys app
+on property:persist.sys.vramsize=8192M
+     setprop persist.vendor.vramsize 8192
+
+# this is for sys app
+on property:persist.sys.vramsize=10240M
+     setprop persist.vendor.vramsize 10240
+     
+# this is for sys app
+on property:persist.sys.vramsize=12288M
+     setprop persist.vendor.vramsize 12288     
+
+# for start vram 
+on property:sys.boot_completed=1 && property:persist.vendor.vramenable=true && property:persist.vendor.vramconfigdone=true
+   start kernel-bootvram 
+
+# for create vram swap files  
+on early-boot && property:persist.vendor.vramenable=true
+     start kernel-createvramfiles  
+   
+#on property:sys.shutdown.requested=*
+#    start kernel-vramswappwd
+   
+on early-boot && property:persist.vendor.vramenable=false
+   rm /data/vendor/swap/swapfile
+

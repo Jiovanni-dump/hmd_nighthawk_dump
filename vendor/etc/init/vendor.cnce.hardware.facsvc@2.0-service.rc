@@ -1,0 +1,10 @@
+service facsvc-hal-2-0 /vendor/bin/hw/vendor.cnce.hardware.facsvc@2.0-service
+    class hal
+    user system
+    group root system camera bluetooth
+
+on property:odm.sys.faccmd=*
+    exec - root shell -- /system/bin/faccmd
+#modify property to check if setup wizard sikped, for master clear flag
+on property:persist.sys.setupcomplete=*
+   setprop persist.vendor.setupcomplete ${persist.sys.setupcomplete}
